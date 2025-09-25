@@ -64,16 +64,36 @@
     <div class="min-h-screen">
 
         <header class="sticky top-0 z-50 bg-stone/80 backdrop-blur-md border-b border-border-light">
-            <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
-                <a href="Index.html" class="font-serif font-bold text-2xl tracking-tight text-charcoal">
-                    The Philosophical <span class="text-forest-green">Compass</span>
-                </a>
+            <nav class="container mx-auto px-6 py-4">
+                <div class="flex justify-between items-center">
+                    <a href="index.html" class="font-serif font-bold text-2xl tracking-tight text-charcoal">
+                        The Philosophical <span class="text-forest-green">Compass</span>
+                    </a>
+                <!-- Desktop Menu (Hidden on mobile) -->
                 <ul class="hidden md:flex items-center space-x-8 text-sm font-bold">
                     <li><a href="dialogues.html" class="text-slate hover:text-forest-green transition-colors duration-300">Dialogues</a></li>
                     <li><a href="themes.html" class="text-slate hover:text-forest-green transition-colors duration-300">Themes</a></li>
                     <li><a href="about.html" class="text-slate hover:text-forest-green transition-colors duration-300">About</a></li>
                     <li><a href="subscribe.html" class="text-slate hover:text-forest-green transition-colors duration-300">Subscribe</a></li>
                 </ul>
+                <!-- Hamburger Button (Visible on mobile) -->
+                <div class="md:hidden">
+                    <button id="menu-btn" class="text-charcoal hover:text-forest-green focus:outline-none">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                        </svg>
+                    </button>
+                </div>
+    </div>
+                <!-- Mobile Menu (Hidden by default) -->
+                <div id="mobile-menu" class="hidden md:hidden mt-4">
+                    <ul class="flex flex-col space-y-4">
+                        <li><a href="dialogues.html" class="block py-2 text-slate font-bold hover:text-forest-green">Dialogues</a></li>
+                        <li><a href="themes.html" class="block py-2 text-slate font-bold hover:text-forest-green">Themes</a></li>
+                        <li><a href="about.html" class="block py-2 text-slate font-bold hover:text-forest-green">About</a></li>
+                        <li><a href="subscribe.html" class="block py-2 text-slate font-bold hover:text-forest-green">Subscribe</a></li>
+                    </ul>
+                </div>
             </nav>
         </header>
 
@@ -356,5 +376,14 @@
             </div>
         </footer>
     </div>
+    <!-- PASTE THIS SCRIPT TAG JUST BEFORE THE CLOSING </body> TAG -->
+    <script>
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+    menuBtn.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+    });
+</script>
 </body>
 </html>
