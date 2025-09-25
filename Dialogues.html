@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Library of Dialogues | The Philosophical Compass</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        // Elegant Earth Palette
+                        'stone': '#F5F5F4',      
+                        'charcoal': '#36454F',   
+                        'slate': '#64748B',      
+                        'forest-green': '#22543D',
+                        'terracotta': '#D9534F', 
+                        'border-light': '#E7E5E4',
+                    },
+                    fontFamily: {
+                        'sans': ['Lato', 'sans-serif'],
+                        'serif': ['Playfair Display', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+        ::selection {
+            background-color: #22543D; /* forest-green */
+            color: #ffffff;
+        }
+        strong {
+            font-weight: 700;
+            color: #36454F; /* charcoal */
+        }
+        em {
+            font-style: italic;
+            color: #D9534F; /* terracotta */
+        }
+    </style>
+</head>
+
+<body class="font-sans bg-stone text-charcoal antialiased">
+    <div class="min-h-screen">
+
+        <header class="sticky top-0 z-50 bg-stone/80 backdrop-blur-md border-b border-border-light">
+            <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+                <a href="Index.html" class="font-serif font-bold text-2xl tracking-tight text-charcoal">
+                    The Philosophical <span class="text-forest-green">Compass</span>
+                </a>
+                <ul class="hidden md:flex items-center space-x-8 text-sm font-bold">
+                    <li><a href="dialogues.html" class="text-forest-green">Dialogues</a></li>
+                    <li><a href="themes.html" class="text-slate hover:text-forest-green transition-colors duration-300">Themes</a></li>
+                    <li><a href="about.html" class="text-slate hover:text-forest-green transition-colors duration-300">About</a></li>
+                    <li><a href="subscribe.html" class="text-slate hover:text-forest-green transition-colors duration-300">Subscribe</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main class="container mx-auto px-6 py-16 md:py-24">
+            
+            <section class="text-center mb-16 max-w-3xl mx-auto">
+    <h1 class="font-serif font-extrabold text-4xl md:text-6xl text-charcoal leading-tight">The Library of Dialogues</h1>
+    <p class="mt-4 text-lg text-slate leading-relaxed">Browse our collection of curated conversations. Each dialogue is a journey into a different landscape of thought.</p>
+</section>
+
+<!-- Horizontal scrollable card slider -->
+<div class="overflow-x-auto">
+  <div class="flex space-x-6 pb-6 snap-x snap-mandatory">
+    
+    <!-- Card 1 -->
+    <a href="Introduction.html" class="group flex-shrink-0 w-80 snap-start flex flex-col bg-white rounded-lg overflow-hidden border border-border-light hover:shadow-xl transition-all duration-300">
+        <img src="https://placehold.co/600x400/F5F5F4/36454F?text=Debate+Visual" alt="Monotheism vs Symbolism" class="w-full h-48 object-cover">
+        <div class="p-6 flex flex-col flex-grow">
+            <p class="text-sm font-bold text-forest-green">Philosophy of Religion</p>
+            <h2 class="font-serif text-2xl font-bold text-charcoal mt-2">Monotheism vs. Symbolism</h2>
+            <p class="text-slate text-sm mt-3 flex-grow">Can the Infinite be represented by the finite? A classical debate on the nature of God and the role of idols.</p>
+            <div class="mt-6 border-t border-border-light pt-4">
+                <p class="text-xs text-slate mb-2">Participants:</p>
+                <div class="flex items-center space-x-2">
+                    <img src="https://placehold.co/40x40/22543D/FFFFFF/png?text=IS" class="w-8 h-8 rounded-full border-2 border-white" title="Ibn Sina" alt="Ibn Sina">
+                    <img src="https://placehold.co/40x40/D9534F/FFFFFF/png?text=S" class="w-8 h-8 rounded-full border-2 border-white" title="Shankara" alt="Shankara">
+                    <span class="text-sm text-slate">+4 more</span>
+                </div>
+            </div>
+        </div>
+    </a>
+
+    <!-- Card 2 -->
+    <a href="#" class="group flex-shrink-0 w-80 snap-start flex flex-col bg-white rounded-lg overflow-hidden border border-border-light hover:shadow-xl transition-all duration-300">
+        <img src="https://placehold.co/600x400/E7E5E4/36454F?text=Debate+Visual" alt="Stoicism" class="w-full h-48 object-cover">
+        <div class="p-6 flex flex-col flex-grow">
+            <p class="text-sm font-bold text-forest-green">Ethics & Lifestyle</p>
+            <h2 class="font-serif text-2xl font-bold text-charcoal mt-2">The Stoic's Path to Peace</h2>
+            <p class="text-slate text-sm mt-3 flex-grow">A conversation exploring whether ancient Roman philosophy can provide a resilient framework for modern anxiety.</p>
+            <div class="mt-6 border-t border-border-light pt-4">
+                <p class="text-xs text-slate mb-2">Participants:</p>
+                <div class="flex items-center space-x-2">
+                    <img src="https://placehold.co/40x40/22543D/FFFFFF/png?text=SE" class="w-8 h-8 rounded-full border-2 border-white" title="Seneca" alt="Seneca">
+                    <img src="https://placehold.co/40x40/D9534F/FFFFFF/png?text=MP" class="w-8 h-8 rounded-full border-2 border-white" title="Modern Psychologist" alt="Modern Psychologist">
+                </div>
+            </div>
+        </div>
+    </a>
+
+    <!-- Card 3 -->
+    <a href="#" class="group flex-shrink-0 w-80 snap-start flex flex-col bg-white rounded-lg overflow-hidden border border-border-light hover:shadow-xl transition-all duration-300">
+        <img src="https://placehold.co/600x400/D9534F/FFFFFF?text=Debate+Visual" alt="Zen and Minimalism" class="w-full h-48 object-cover">
+        <div class="p-6 flex flex-col flex-grow">
+            <p class="text-sm font-bold text-forest-green">Art & Philosophy</p>
+            <h2 class="font-serif text-2xl font-bold text-charcoal mt-2">Zen, Art, and Minimalism</h2>
+            <p class="text-slate text-sm mt-3 flex-grow">Is less truly more? Uncovering the deep connection between Zen Buddhist principles and the modern minimalist lifestyle.</p>
+            <div class="mt-6 border-t border-border-light pt-4">
+                <p class="text-xs text-slate mb-2">Participants:</p>
+                <div class="flex items-center space-x-2">
+                    <img src="https://placehold.co/40x40/22543D/FFFFFF/png?text=ZM" class="w-8 h-8 rounded-full border-2 border-white" title="Zen Master" alt="Zen Master">
+                    <img src="https://placehold.co/40x40/D9534F/FFFFFF/png?text=AD" class="w-8 h-8 rounded-full border-2 border-white" title="Art Historian" alt="Art Historian">
+                </div>
+            </div>
+        </div>
+    </a>
+
+    <!-- Extra 7 sample cards (blank content for editing later) -->
+    <a href="#" class="group flex-shrink-0 w-80 snap-start flex flex-col bg-white rounded-lg overflow-hidden border border-border-light hover:shadow-xl transition-all duration-300">
+        <img src="https://placehold.co/600x400/22543D/FFFFFF?text=Debate+Visual" alt="Sample Dialogue" class="w-full h-48 object-cover">
+        <div class="p-6"><h2 class="font-serif text-xl font-bold text-charcoal">Sample Dialogue 1</h2></div>
+    </a>
+
+    <a href="#" class="group flex-shrink-0 w-80 snap-start flex flex-col bg-white rounded-lg overflow-hidden border border-border-light hover:shadow-xl transition-all duration-300">
+        <img src="https://placehold.co/600x400/64748B/FFFFFF?text=Debate+Visual" alt="Sample Dialogue" class="w-full h-48 object-cover">
+        <div class="p-6"><h2 class="font-serif text-xl font-bold text-charcoal">Sample Dialogue 2</h2></div>
+    </a>
+
+    <a href="#" class="group flex-shrink-0 w-80 snap-start flex flex-col bg-white rounded-lg overflow-hidden border border-border-light hover:shadow-xl transition-all duration-300">
+        <img src="https://placehold.co/600x400/D9534F/FFFFFF?text=Debate+Visual" alt="Sample Dialogue" class="w-full h-48 object-cover">
+        <div class="p-6"><h2 class="font-serif text-xl font-bold text-charcoal">Sample Dialogue 3</h2></div>
+    </a>
+
+    <a href="#" class="group flex-shrink-0 w-80 snap-start flex flex-col bg-white rounded-lg overflow-hidden border border-border-light hover:shadow-xl transition-all duration-300">
+        <img src="https://placehold.co/600x400/36454F/FFFFFF?text=Debate+Visual" alt="Sample Dialogue" class="w-full h-48 object-cover">
+        <div class="p-6"><h2 class="font-serif text-xl font-bold text-charcoal">Sample Dialogue 4</h2></div>
+    </a>
+
+    <a href="#" class="group flex-shrink-0 w-80 snap-start flex flex-col bg-white rounded-lg overflow-hidden border border-border-light hover:shadow-xl transition-all duration-300">
+        <img src="https://placehold.co/600x400/E7E5E4/36454F?text=Debate+Visual" alt="Sample Dialogue" class="w-full h-48 object-cover">
+        <div class="p-6"><h2 class="font-serif text-xl font-bold text-charcoal">Sample Dialogue 5</h2></div>
+    </a>
+
+    <a href="#" class="group flex-shrink-0 w-80 snap-start flex flex-col bg-white rounded-lg overflow-hidden border border-border-light hover:shadow-xl transition-all duration-300">
+        <img src="https://placehold.co/600x400/F5F5F4/36454F?text=Debate+Visual" alt="Sample Dialogue" class="w-full h-48 object-cover">
+        <div class="p-6"><h2 class="font-serif text-xl font-bold text-charcoal">Sample Dialogue 6</h2></div>
+    </a>
+
+    <a href="#" class="group flex-shrink-0 w-80 snap-start flex flex-col bg-white rounded-lg overflow-hidden border border-border-light hover:shadow-xl transition-all duration-300">
+        <img src="https://placehold.co/600x400/22543D/FFFFFF?text=Debate+Visual" alt="Sample Dialogue" class="w-full h-48 object-cover">
+        <div class="p-6"><h2 class="font-serif text-xl font-bold text-charcoal">Sample Dialogue 7</h2></div>
+    </a>
+
+  </div>
+</div>
+
+        </main>
+
+        <footer class="mt-16 border-t border-border-light bg-white">
+            <div class="container mx-auto px-6 py-8 text-center text-slate text-sm">
+                <p>&copy; 2025 The Philosophical Compass. All Rights Reserved.</p>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Themes | The Philosophical Compass</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        // Elegant Earth Palette
+                        'stone': '#F5F5F4',      
+                        'charcoal': '#36454F',   
+                        'slate': '#64748B',      
+                        'forest-green': '#22543D',
+                        'terracotta': '#D9534F', 
+                        'border-light': '#E7E5E4',
+                    },
+                    fontFamily: {
+                        'sans': ['Lato', 'sans-serif'],
+                        'serif': ['Playfair Display', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+        ::selection {
+            background-color: #22543D; /* forest-green */
+            color: #ffffff;
+        }
+        strong {
+            font-weight: 700;
+            color: #36454F; /* charcoal */
+        }
+        em {
+            font-style: italic;
+            color: #D9534F; /* terracotta */
+        }
+    </style>
+</head>
+
+<body class="font-sans bg-stone text-charcoal antialiased">
+    <div class="min-h-screen">
+
+        <header class="sticky top-0 z-50 bg-stone/80 backdrop-blur-md border-b border-border-light">
+            <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+                <a href="index.html" class="font-serif font-bold text-2xl tracking-tight text-charcoal">
+                    The Philosophical <span class="text-forest-green">Compass</span>
+                </a>
+                <ul class="hidden md:flex items-center space-x-8 text-sm font-bold">
+                    <li><a href="dialogues.html" class="text-slate hover:text-forest-green transition-colors duration-300">Dialogues</a></li>
+                    <li><a href="themes.html" class="text-forest-green">Themes</a></li>
+                    <li><a href="about.html" class="text-slate hover:text-forest-green transition-colors duration-300">About</a></li>
+                    <li><a href="subscribe.html" class="text-slate hover:text-forest-green transition-colors duration-300">Subscribe</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main class="container mx-auto px-6 py-16 md:py-24">
+            
+            <section class="text-center mb-16 max-w-3xl mx-auto">
+                <h1 class="font-serif font-extrabold text-4xl md:text-6xl text-charcoal leading-tight">Explore Our Themes</h1>
+                <p class="mt-4 text-lg text-slate leading-relaxed">Dive into the fundamental questions and enduring ideas that shape our understanding of the world.</p>
+            </section>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
+
+    <a href="#" class="group block bg-white rounded-lg shadow-sm border border-border-light p-6 text-center hover:shadow-xl hover:border-forest-green transition-all duration-300">
+        <div class="text-forest-green group-hover:text-terracotta transition-colors duration-300 mb-4">
+            <i class="fas fa-hamsa text-5xl"></i>
+        </div>
+        <h2 class="font-serif text-2xl font-bold text-charcoal group-hover:text-forest-green transition-colors duration-300">Philosophy of Religion</h2>
+        <p class="text-slate text-sm mt-2">Exploring faith, spirituality, the nature of divinity, and the human search for meaning.</p>
+    </a>
+
+    <a href="#" class="group block bg-white rounded-lg shadow-sm border border-border-light p-6 text-center hover:shadow-xl hover:border-forest-green transition-all duration-300">
+        <div class="text-forest-green group-hover:text-terracotta transition-colors duration-300 mb-4">
+            <i class="fas fa-compass text-5xl"></i>
+        </div>
+        <h2 class="font-serif text-2xl font-bold text-charcoal group-hover:text-forest-green transition-colors duration-300">Ethics & Morality</h2>
+        <p class="text-slate text-sm mt-2">The study of right and wrong, virtue, duty, and the foundations of human conduct.</p>
+    </a>
+
+    <a href="#" class="group block bg-white rounded-lg shadow-sm border border-border-light p-6 text-center hover:shadow-xl hover:border-forest-green transition-all duration-300">
+        <div class="text-forest-green group-hover:text-terracotta transition-colors duration-300 mb-4">
+            <i class="fas fa-landmark text-5xl"></i>
+        </div>
+        <h2 class="font-serif text-2xl font-bold text-charcoal group-hover:text-forest-green transition-colors duration-300">Ancient Wisdom</h2>
+        <p class="text-slate text-sm mt-2">Timeless insights from Greek, Roman, and other classical philosophical traditions.</p>
+    </a>
+
+    <a href="#" class="group block bg-white rounded-lg shadow-sm border border-border-light p-6 text-center hover:shadow-xl hover:border-forest-green transition-all duration-300">
+        <div class="text-forest-green group-hover:text-terracotta transition-colors duration-300 mb-4">
+            <i class="fas fa-yin-yang text-5xl"></i>
+        </div>
+        <h2 class="font-serif text-2xl font-bold text-charcoal group-hover:text-forest-green transition-colors duration-300">Eastern Philosophy</h2>
+        <p class="text-slate text-sm mt-2">Exploring thought systems from Asia, including Buddhism, Taoism, and Vedanta.</p>
+    </a>
+    
+</div>
+        </main>
+
+        <footer class="mt-16 border-t border-border-light bg-white">
+            <div class="container mx-auto px-6 py-8 text-center text-slate text-sm">
+                <p>&copy; 2025 The Philosophical Compass. All Rights Reserved.</p>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | The Philosophical Compass</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        // Elegant Earth Palette
+                        'stone': '#F5F5F4',      
+                        'charcoal': '#36454F',   
+                        'slate': '#64748B',      
+                        'forest-green': '#22543D',
+                        'terracotta': '#D9534F', 
+                        'border-light': '#E7E5E4',
+                    },
+                    fontFamily: {
+                        'sans': ['Lato', 'sans-serif'],
+                        'serif': ['Playfair Display', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+        ::selection {
+            background-color: #22543D; /* forest-green */
+            color: #ffffff;
+        }
+        strong {
+            font-weight: 700;
+            color: #36454F; /* charcoal */
+        }
+        em {
+            font-style: italic;
+            color: #D9534F; /* terracotta */
+        }
+    </style>
+</head>
+
+<body class="font-sans bg-stone text-charcoal antialiased">
+    <div class="min-h-screen">
+
+        <header class="sticky top-0 z-50 bg-stone/80 backdrop-blur-md border-b border-border-light">
+            <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+                <a href="index.html" class="font-serif font-bold text-2xl tracking-tight text-charcoal">
+                    The Philosophical <span class="text-forest-green">Compass</span>
+                </a>
+                <ul class="hidden md:flex items-center space-x-8 text-sm font-bold">
+                    <li><a href="dialogues.html" class="text-slate hover:text-forest-green transition-colors duration-300">Dialogues</a></li>
+                    <li><a href="themes.html" class="text-slate hover:text-forest-green transition-colors duration-300">Themes</a></li>
+                    <li><a href="about.html" class="text-forest-green">About</a></li>
+                    <li><a href="subscribe.html" class="text-slate hover:text-forest-green transition-colors duration-300">Subscribe</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main class="container mx-auto px-6 py-16 md:py-24">
+
+            <section class="text-center mb-16 max-w-3xl mx-auto">
+                <h1 class="font-serif font-extrabold text-4xl md:text-6xl text-charcoal leading-tight">Our Quest for Understanding</h1>
+                <p class="mt-4 text-lg text-slate leading-relaxed">Exploring the 'why' behind The Philosophical Compass—a space dedicated to the respectful exchange of profound ideas.</p>
+            </section>
+
+            <div class="max-w-4xl mx-auto space-y-12">
+                <section class="bg-white rounded-lg shadow-sm p-8 md:p-12 border border-border-light">
+                    <div class="grid md:grid-cols-5 gap-8 items-center">
+                        <div class="md:col-span-3">
+                            <h2 class="font-serif text-3xl font-bold text-charcoal mb-4">Our Mission</h2>
+                            <p class="text-slate leading-relaxed mb-4">In a world that often encourages us to speak past one another, we believe in the quiet power of listening. Our mission is to build bridges of understanding by exploring the diverse philosophies, faiths, and lifestyles that shape our world.</p>
+                            <p class="text-slate leading-relaxed">We don't seek simple answers. Instead, we embrace the complexity of the human experience, using the art of dialogue to illuminate different paths to meaning, purpose, and truth.</p>
+                        </div>
+                        <div class="md:col-span-2 text-center p-4">
+                            <span class="font-serif text-8xl text-forest-green/20">“</span>
+                            <p class="font-serif text-xl italic text-slate -mt-8">The goal is not to win an argument, but to understand a world.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="bg-white rounded-lg shadow-sm p-8 md:p-12 border border-border-light">
+                    <div class="grid md:grid-cols-3 gap-8 md:gap-12 items-center">
+                        <div class="md:col-span-1">
+                            <img src="https://placehold.co/400x400/E7E5E4/36454F?text=Your+Photo" alt="Portrait of the founder" class="rounded-lg shadow-md w-full h-auto object-cover">
+                        </div>
+                        <div class="md:col-span-2">
+                            <h2 class="font-serif text-3xl font-bold text-charcoal mb-4">About the Founder</h2>
+                            <p class="text-slate leading-relaxed mb-4">Replace this with your bio. Talk about your passion for philosophy, your background, and what inspired you to create this space. Explain your personal journey and why you believe these conversations are important in today's world.</p>
+                            <p class="text-slate leading-relaxed">This is a great place to connect with your readers on a human level, sharing your own quest for knowledge and understanding.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section>
+                    <div class="text-center max-w-2xl mx-auto pt-8 mb-12">
+                        <h2 class="font-serif text-4xl font-bold text-charcoal">Our Principles</h2>
+                        <p class="mt-4 text-slate">Every dialogue is guided by a commitment to these core values.</p>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                        <div class="text-center p-6">
+                            <div class="w-12 h-12 text-forest-green mx-auto mb-4">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747M12 21V3M4.285 9.423a9.004 9.004 0 018.716-6.747M19.715 9.423a9.004 9.004 0 00-8.716-6.747M4.285 14.577a9.004 9.004 0 008.716 6.747M19.715 14.577a9.004 9.004 0 01-8.716 6.747M12 3c-4.83 0-8.716 3.916-8.716 8.747a9.007 9.007 0 005.168 8.018" /></svg>
+                            </div>
+                            <h3 class="font-serif text-xl font-bold text-charcoal">Intellectual Charity</h3>
+                            <p class="text-slate text-sm mt-2">We engage with the strongest, most compelling versions of every argument, never a caricature.</p>
+                        </div>
+                        <div class="text-center p-6">
+                            <div class="w-12 h-12 text-forest-green mx-auto mb-4">
+                               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 12.76c0 1.6 1.123 2.994 2.707 3.227 1.087.16 2.185.283 3.293.369V21l4.076-4.076a1.526 1.526 0 011.037-.443 48.282 48.282 0 005.68-.494c1.584-.233 2.707-1.626 2.707-3.228V6.741c0-1.602-1.123-2.995-2.707-3.228A48.397 48.397 0 0012 3c-2.392 0-4.744.175-7.043.513C3.373 3.746 2.25 5.14 2.25 6.741v6.018z" /></svg>
+                            </div>
+                            <h3 class="font-serif text-xl font-bold text-charcoal">Respectful Dialogue</h3>
+                            <p class="text-slate text-sm mt-2">Our goal is to understand, not to defeat. We believe genuine conversation requires humility and respect.</p>
+                        </div>
+                        <div class="text-center p-6">
+                            <div class="w-12 h-12 text-forest-green mx-auto mb-4">
+                               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M15.042 21.672L13.684 16.6m0 0l-2.51 2.225.569-9.47 5.227 7.917-3.286-.672zM12 2.25V4.5m5.834.166l-1.591 1.591M20.25 10.5h2.25m-1.666 5.834l1.591 1.591M12 21.75V19.5m-5.834-.166l1.591-1.591M3.75 10.5H1.5m1.666-5.834l-1.591-1.591" /></svg>
+                            </div>
+                            <h3 class="font-serif text-xl font-bold text-charcoal">Pursuit of Clarity</h3>
+                            <p class="text-slate text-sm mt-2">We strive to distill complex ideas into clear, accessible language without sacrificing depth or nuance.</p>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </main>
+
+        <footer class="mt-16 border-t border-border-light bg-white">
+            <div class="container mx-auto px-6 py-8 text-center text-slate text-sm">
+                <p>&copy; 2025 The Philosophical Compass. All Rights Reserved.</p>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Subscribe | The Philosophical Compass</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        // Elegant Earth Palette
+                        'stone': '#F5F5F4',      
+                        'charcoal': '#36454F',   
+                        'slate': '#64748B',      
+                        'forest-green': '#22543D',
+                        'terracotta': '#D9534F', 
+                        'border-light': '#E7E5E4',
+                    },
+                    fontFamily: {
+                        'sans': ['Lato', 'sans-serif'],
+                        'serif': ['Playfair Display', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+        ::selection {
+            background-color: #22543D; /* forest-green */
+            color: #ffffff;
+        }
+        strong {
+            font-weight: 700;
+            color: #36454F; /* charcoal */
+        }
+        em {
+            font-style: italic;
+            color: #D9534F; /* terracotta */
+        }
+    </style>
+</head>
+
+<body class="font-sans bg-stone text-charcoal antialiased">
+    <div class="flex flex-col min-h-screen">
+
+        <header class="sticky top-0 z-50 bg-stone/80 backdrop-blur-md border-b border-border-light">
+            <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+                <a href="index.html" class="font-serif font-bold text-2xl tracking-tight text-charcoal">
+                    The Philosophical <span class="text-forest-green">Compass</span>
+                </a>
+                <ul class="hidden md:flex items-center space-x-8 text-sm font-bold">
+                    <li><a href="dialogues.html" class="text-slate hover:text-forest-green transition-colors duration-300">Dialogues</a></li>
+                    <li><a href="themes.html" class="text-slate hover:text-forest-green transition-colors duration-300">Themes</a></li>
+                    <li><a href="about.html" class="text-slate hover:text-forest-green transition-colors duration-300">About</a></li>
+                    <li><a href="subscribe.html" class="text-forest-green">Subscribe</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main class="flex-grow flex items-center justify-center">
+            <div class="container mx-auto px-6 py-16 md:py-24">
+                
+                <div class="max-w-xl mx-auto bg-white rounded-lg shadow-sm border border-border-light p-8 md:p-12 text-center">
+                    
+                    <h1 class="font-serif font-extrabold text-3xl md:text-5xl text-charcoal">Join the Inquiry</h1>
+                    <p class="mt-4 text-slate leading-relaxed">Become part of our community of thinkers. Subscribe for free to receive new dialogues and reflections directly in your inbox.</p>
+                    
+                    <div class="text-left space-y-4 my-8">
+                        <div class="flex items-start">
+                            <div class="w-6 h-6 text-forest-green mr-4 flex-shrink-0 mt-1">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" /></svg>
+                            </div>
+                            <div>
+                                <h3 class="font-sans font-bold text-charcoal">New Dialogues, Delivered</h3>
+                                <p class="text-sm text-slate">Be the first to read our latest explorations as soon as they're published.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                             <div class="w-6 h-6 text-forest-green mr-4 flex-shrink-0 mt-1">
+                               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 012.829-5.195l2.422-1.159a4.5 4.5 0 00-5.195-2.829L9 6.25l-.813 2.846a4.5 4.5 0 005.195 2.829l2.422 1.159a4.5 4.5 0 01-2.829 5.195z" /></svg>
+                            </div>
+                             <div>
+                                <h3 class="font-sans font-bold text-charcoal">Exclusive Insights</h3>
+                                <p class="text-sm text-slate">Receive occasional notes, recommended readings, and thoughts not shared on the blog.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <form class="flex flex-col md:flex-row gap-4 w-full">
+                        <input type="email" placeholder="your.email@example.com" required class="w-full px-5 py-3 rounded-md border border-border-light bg-stone focus:ring-2 focus:ring-forest-green focus:outline-none transition-shadow text-charcoal">
+                        <button type="submit" class="font-bold text-white bg-charcoal rounded-md py-3 px-8 transition-all duration-300 hover:bg-forest-green">
+                            Subscribe Now
+                        </button>
+                    </form>
+
+                    <p class="text-xs text-slate mt-4">No spam, ever. Unsubscribe at any time.</p>
+                </div>
+
+            </div>
+        </main>
+
+        <footer class="mt-auto border-t border-border-light bg-white">
+            <div class="container mx-auto px-6 py-8 text-center text-slate text-sm">
+                <p>&copy; 2025 The Philosophical Compass. All Rights Reserved.</p>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
