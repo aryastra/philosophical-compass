@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Theme: Philosophy of Religion | The Philosophical Compass</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        // Zen Garden Palette
+                        'stone': '#F1F5F9',        
+                        'white': '#FFFFFF',
+                        'charcoal': '#1E293B',     
+                        'slate': '#64748B',        
+                        'sage-green': '#65816D',  
+                        'sand': '#F4E9CD',          
+                        'border-color': '#E2E8F0',  
+                    },
+                    fontFamily: {
+                        'sans': ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        html { scroll-behavior: smooth; }
+        ::selection { background-color: #65816D; color: #ffffff; }
+        strong { font-weight: 700; color: #1E293B; }
+        em { font-style: italic; color: #65816D; }
+        /* Style for article content */
+        .article-content h2 {
+            font-size: 1.875rem; /* text-3xl */
+            font-weight: 700;
+            color: #1E293B; /* charcoal */
+            margin-top: 2.5rem; /* mt-10 */
+            margin-bottom: 1rem; /* mb-4 */
+            padding-bottom: 0.5rem; /* pb-2 */
+            border-bottom: 1px solid #E2E8F0; /* border-color */
+        }
+        .article-content p {
+            margin-bottom: 1.5rem; /* mb-6 */
+        }
+        .article-content a {
+            color: #65816D; /* sage-green */
+            font-weight: 600;
+            text-decoration: underline;
+            text-decoration-offset: 2px;
+        }
+    </style>
+</head>
+
+<body class="font-sans bg-stone text-charcoal antialiased">
+    <div class="min-h-screen">
+
+        <header class="sticky top-0 z-50 bg-stone/80 backdrop-blur-md border-b border-border-color">
+            <nav class="container mx-auto px-6 py-4">
+                <div class="flex justify-between items-center">
+                    <a href="index.html" class="font-extrabold text-2xl tracking-tight text-charcoal">
+                        The Philosophical <span class="text-sage-green">Compass</span>
+                    </a>
+                    <ul class="hidden md:flex items-center space-x-8 text-sm font-semibold">
+                        <li><a href="dialogues.html" class="text-slate hover:text-sage-green transition-colors duration-300">Dialogues</a></li>
+                        <li><a href="themes.html" class="text-sage-green">Themes</a></li>
+                        <li><a href="about.html" class="text-slate hover:text-sage-green transition-colors duration-300">About</a></li>
+                        <li><a href="subscribe.html" class="text-slate hover:text-sage-green transition-colors duration-300">Subscribe</a></li>
+                    </ul>
+                    <div class="md:hidden">
+                        <button id="menu-btn" class="text-charcoal hover:text-sage-green focus:outline-none">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                        </button>
+                    </div>
+                </div>
+                <div id="mobile-menu" class="hidden md:hidden mt-4">
+                    <ul class="flex flex-col space-y-4">
+                        <li><a href="dialogues.html" class="block py-2 text-slate font-bold hover:text-sage-green">Dialogues</a></li>
+                        <li><a href="themes.html" class="block py-2 text-sage-green font-bold">Themes</a></li>
+                        <li><a href="about.html" class="block py-2 text-slate font-bold hover:text-sage-green">About</a></li>
+                        <li><a href="subscribe.html" class="block py-2 text-slate font-bold hover:text-sage-green">Subscribe</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+
+        <main class="container mx-auto px-6 py-16 md:py-24">
+
+            <div class="max-w-4xl mx-auto">
+                <article class="bg-white rounded-lg shadow-sm p-8 md:p-12 border border-border-color">
+                    <header class="text-center border-b border-border-color pb-8 mb-8">
+                        <p class="text-sm font-semibold text-sage-green uppercase tracking-widest">Theme</p>
+                        <h1 class="font-extrabold text-4xl md:text-6xl text-charcoal leading-tight tracking-tighter mt-2">
+                            Philosophy of Religion
+                        </h1>
+                        <p class="mt-4 text-lg text-slate max-w-2xl mx-auto">An exploration of the fundamental questions surrounding divinity, faith, reason, and existence.</p>
+                    </header>
+                    
+                    <div class="article-content text-base leading-relaxed text-slate">
+                        <p><strong>Replace this with your introduction.</strong> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. This page serves as a comprehensive overview—or Pillar Page—for all topics related to the philosophy of religion. It provides context for the more specific dialogues linked below.</p>
+
+                        <h2>The Nature of the Divine</h2>
+                        <p>One of the central questions in this field is the very nature of God. Is the divine a singular, transcendent, and formless being, as argued in classical monotheism? Or can the Infinite be approached through a multiplicity of forms and symbols? This fundamental difference in understanding shapes everything from worship to morality. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. For a deep dive into this, see our dialogue on <a href="dialogue-monotheism-vs-symbolism.html">Monotheism vs. Symbolism</a>.</p>
+                        
+                        <h2>Reason, Revelation, and Belief</h2>
+                        <p>How can we justify belief in God? Must faith be supported by logical proof, or does it operate in a realm beyond empirical evidence? This question places rationalist philosophers in conversation with theologians who argue for the necessity of revelation. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. We explore the arguments from both sides in our foundational <a href="dialogue-atheism-intro.html">God Debate: Atheism vs. Theism</a>.</p>
+                        
+                        <h2>The Problem of Evil and Suffering</h2>
+                        <p>If a benevolent and omnipotent God exists, why is there so much suffering in the world? This is perhaps the most powerful emotional and logical challenge to theism. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. This topic is a central theme in many of our dialogues.</p>
+                    </div>
+                </article>
+
+                <section class="mt-16">
+                    <h2 class="font-bold text-3xl md:text-4xl tracking-tighter text-charcoal text-center mb-12">Related Dialogues in This Theme</h2>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        <a href="dialogue-monotheism-vs-symbolism.html" class="group flex flex-col bg-white rounded-lg overflow-hidden border border-border-color shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+                            <img src="https://placehold.co/600x400/F1F5F9/1E293B?text=Debate+Visual" alt="Monotheism vs Symbolism" class="w-full h-48 object-cover">
+                            <div class="p-6 flex flex-col flex-grow">
+                                <h3 class="text-xl font-bold text-charcoal mt-2">Monotheism vs. Symbolism</h3>
+                                <p class="text-slate text-sm mt-3 flex-grow">A classical debate on the nature of God and the role of idols in worship.</p>
+                            </div>
+                        </a>
+                        <a href="dialogue-atheism-intro.html" class="group flex flex-col bg-white rounded-lg overflow-hidden border border-border-color shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+                            <img src="https://placehold.co/600x400/1E293B/FFFFFF?text=Debate+Visual" alt="Atheism vs. Theism" class="w-full h-48 object-cover">
+                            <div class="p-6 flex flex-col flex-grow">
+                                <h3 class="text-xl font-bold text-charcoal mt-2">The God Debate: Atheism vs. Theism</h3>
+                                <p class="text-slate text-sm mt-3 flex-grow">A clash of worldviews pitting scientific materialism against metaphysical proofs for God.</p>
+                            </div>
+                        </a>
+                        </div>
+                </section>
+
+            </div>
+        </main>
+
+        <footer class="mt-16 border-t border-border-color bg-white">
+            <div class="container mx-auto px-6 py-8 text-center text-slate text-sm">
+                <p>&copy; 2025 The Philosophical Compass. All Rights Reserved.</p>
+            </div>
+        </footer>
+    </div>
+    
+    <script>
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>

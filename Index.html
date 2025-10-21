@@ -9,24 +9,24 @@
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     colors: {
-                        // Elegant Earth Palette
-                        'stone': '#F5F5F4',      
-                        'charcoal': '#36454F',   
-                        'slate': '#64748B',      
-                        'forest-green': '#22543D',
-                        'terracotta': '#D9534F', 
-                        'border-light': '#E7E5E4',
+                        // Zen Garden Palette
+                        'stone': '#F1F5F9',        
+                        'white': '#FFFFFF',
+                        'charcoal': '#1E293B',     
+                        'slate': '#64748B',        
+                        'sage-green': '#65816D',  
+                        'sand': '#F4E9CD',          
+                        'border-color': '#E2E8F0',  
                     },
                     fontFamily: {
-                        'sans': ['Lato', 'sans-serif'],
-                        'serif': ['Playfair Display', 'serif'],
+                        'sans': ['Inter', 'sans-serif'],
                     }
                 }
             }
@@ -34,64 +34,50 @@
     </script>
 
     <style>
-        html {
-            scroll-behavior: smooth;
+        html { scroll-behavior: smooth; }
+        ::selection { background-color: #65816D; color: #ffffff; }
+        strong { font-weight: 700; color: #1E293B; }
+        em { font-style: italic; color: #65816D; }
+        .scrollbar-hide::-webkit-scrollbar { display: none; }
+        .scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
+        #typed-text { color: #65816D; }
+        .typed-cursor {
+            color: #1E293B;
+            opacity: 1;
+            animation: typedjsBlink 0.7s infinite;
+            font-weight: normal;
         }
-        ::selection {
-            background-color: #22543D;
-            color: #ffffff;
-        }
-        strong {
-            font-weight: 700;
-            color: #36454F;
-        }
-        em {
-            font-style: italic;
-            color: #D9534F;
-        }
-        /* This is the correct place for the scrollbar utility */
-        .scrollbar-hide::-webkit-scrollbar {
-            display: none;
-        }
-        .scrollbar-hide {
-            -ms-overflow-style: none;
-            scrollbar-width: none;
-        }
+        @keyframes typedjsBlink { 50% { opacity: 0.0; } }
     </style>
 </head>
 
 <body class="font-sans bg-stone text-charcoal antialiased">
     <div class="min-h-screen">
 
-        <header class="sticky top-0 z-50 bg-stone/80 backdrop-blur-md border-b border-border-light">
+        <header class="sticky top-0 z-50 bg-stone/80 backdrop-blur-md border-b border-border-color">
             <nav class="container mx-auto px-6 py-4">
                 <div class="flex justify-between items-center">
-                    <a href="index.html" class="font-serif font-bold text-2xl tracking-tight text-charcoal">
-                        The Philosophical <span class="text-forest-green">Compass</span>
+                    <a href="index.html" class="font-extrabold text-2xl tracking-tight text-charcoal">
+                        The Philosophical <span class="text-sage-green">Compass</span>
                     </a>
-                <!-- Desktop Menu (Hidden on mobile) -->
-                <ul class="hidden md:flex items-center space-x-8 text-sm font-bold">
-                    <li><a href="dialogues.html" class="text-slate hover:text-forest-green transition-colors duration-300">Dialogues</a></li>
-                    <li><a href="themes.html" class="text-slate hover:text-forest-green transition-colors duration-300">Themes</a></li>
-                    <li><a href="about.html" class="text-slate hover:text-forest-green transition-colors duration-300">About</a></li>
-                    <li><a href="subscribe.html" class="text-slate hover:text-forest-green transition-colors duration-300">Subscribe</a></li>
-                </ul>
-                <!-- Hamburger Button (Visible on mobile) -->
-                <div class="md:hidden">
-                    <button id="menu-btn" class="text-charcoal hover:text-forest-green focus:outline-none">
-                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
-                        </svg>
-                    </button>
+                    <ul class="hidden md:flex items-center space-x-8 text-sm font-semibold">
+                        <li><a href="dialogues.html" class="text-slate hover:text-sage-green transition-colors duration-300">Dialogues</a></li>
+                        <li><a href="themes.html" class="text-slate hover:text-sage-green transition-colors duration-300">Themes</a></li>
+                        <li><a href="about.html" class="text-slate hover:text-sage-green transition-colors duration-300">About</a></li>
+                        <li><a href="subscribe.html" class="text-slate hover:text-sage-green transition-colors duration-300">Subscribe</a></li>
+                    </ul>
+                    <div class="md:hidden">
+                        <button id="menu-btn" class="text-charcoal hover:text-sage-green focus:outline-none">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                        </button>
+                    </div>
                 </div>
-    </div>
-                <!-- Mobile Menu (Hidden by default) -->
                 <div id="mobile-menu" class="hidden md:hidden mt-4">
                     <ul class="flex flex-col space-y-4">
-                        <li><a href="dialogues.html" class="block py-2 text-slate font-bold hover:text-forest-green">Dialogues</a></li>
-                        <li><a href="themes.html" class="block py-2 text-slate font-bold hover:text-forest-green">Themes</a></li>
-                        <li><a href="about.html" class="block py-2 text-slate font-bold hover:text-forest-green">About</a></li>
-                        <li><a href="subscribe.html" class="block py-2 text-slate font-bold hover:text-forest-green">Subscribe</a></li>
+                        <li><a href="dialogues.html" class="block py-2 text-slate font-bold hover:text-sage-green">Dialogues</a></li>
+                        <li><a href="themes.html" class="block py-2 text-slate font-bold hover:text-sage-green">Themes</a></li>
+                        <li><a href="about.html" class="block py-2 text-slate font-bold hover:text-sage-green">About</a></li>
+                        <li><a href="subscribe.html" class="block py-2 text-slate font-bold hover:text-sage-green">Subscribe</a></li>
                     </ul>
                 </div>
             </nav>
@@ -102,288 +88,148 @@
             <section class="py-24 md:py-32">
                 <div class="container mx-auto px-6 grid md:grid-cols-2 gap-8 items-center">
                     <div class="max-w-xl">
-                        <h1 class="font-serif font-extrabold text-5xl md:text-7xl text-charcoal leading-tight">
-                            Where Worlds of Thought Meet.
+                        <h1 class="font-extrabold text-5xl md:text-7xl text-charcoal leading-none tracking-tighter flex flex-col items-start">
+                            <span>Where</span>
+                            <div class="h-20 md:h-28 flex items-center">
+                                <span id="typed-text"></span>
+                            </div>
+                            <span>Converges.</span>
                         </h1>
                         <p class="mt-6 text-lg text-slate leading-relaxed">
                             Explore humanity's most profound questions about <em>faith, reason, and existence</em> through the <strong>timeless art of dialogue</strong>.
                         </p>
-                        <a href="#featured" class="mt-10 inline-block font-bold text-white bg-forest-green rounded-md py-3 px-8 transition-all duration-300 hover:bg-charcoal hover:shadow-lg hover:-translate-y-1">
+                        <a href="#featured" class="mt-10 inline-block font-bold text-white bg-sage-green rounded-md py-3 px-8 transition-all duration-300 hover:bg-charcoal hover:shadow-lg hover:-translate-y-1">
                             Start Your Journey
                         </a>
                     </div>
                     <div class="hidden md:flex justify-center items-center">
-                        <span class="font-serif text-9xl text-forest-green/10 select-none transform scale-x-[-1]">
-                            “
-                        </span>
+                        <img src="enso-circle.png" alt="Enso Circle" class="w-64 h-64 opacity-10">
                     </div>
                 </div>
             </section>
 
-            <section id="featured" class="py-16 md:py-24 bg-white border-y border-border-light">
+            <section id="featured" class="py-16 md:py-24 bg-white border-y border-border-color">
                 <div class="container mx-auto px-6">
                     <div class="text-center max-w-2xl mx-auto mb-16">
-                        <h2 class="font-serif font-bold text-4xl md:text-5xl text-charcoal">Latest Inquiries</h2>
+                        <h2 class="font-bold text-4xl md:text-5xl tracking-tighter text-charcoal">Latest Inquiries</h2>
                         <p class="mt-4 text-slate leading-relaxed">
                             Dive into our <strong>curated dialogues</strong>, where <em>ancient wisdom</em> and <em>modern ideas</em> collide in a respectful search for truth.
                         </p>
                     </div>
-
                     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-                        <div class="bg-white rounded-lg border-b-4 border-border-light hover:border-forest-green transition-all duration-300 p-8 flex flex-col shadow-sm hover:shadow-xl">
+                        <div class="bg-white rounded-lg border border-border-color p-8 flex flex-col shadow-sm hover:shadow-xl hover:border-sage-green hover:-translate-y-1 transition-all duration-300">
                             <div class="flex-grow">
-                                <h3 class="font-serif text-2xl font-bold text-charcoal">Monotheism vs. Symbolism</h3>
-                                <p class="mt-3 text-slate text-sm leading-relaxed">A classical debate between <strong>Islamic theologians</strong> and <em>Hindu philosophers</em> on the nature of God and the role of idols in worship.</p>
+                                <h3 class="text-xl font-bold text-charcoal">Monotheism vs. Symbolism</h3>
+                                <p class="mt-3 text-slate text-sm leading-relaxed">A classical debate between <strong>Islamic theologians</strong> and <em>Hindu philosophers</em> on the nature of God.</p>
                             </div>
-                            <a href="Introduction.html" class="mt-6 inline-block text-sm font-bold text-forest-green hover:text-charcoal transition-colors">Read the Dialogue →</a>
+                            <a href="dialogue-monotheism-vs-symbolism.html" class="mt-6 inline-block text-sm font-semibold text-sage-green hover:text-charcoal transition-colors">Read the Dialogue →</a>
                         </div>
-                        <div class="bg-white rounded-lg border-b-4 border-border-light hover:border-forest-green transition-all duration-300 p-8 flex flex-col shadow-sm hover:shadow-xl">
+                        <div class="bg-white rounded-lg border border-border-color p-8 flex flex-col shadow-sm hover:shadow-xl hover:border-sage-green hover:-translate-y-1 transition-all duration-300">
                             <div class="flex-grow">
-                                <h3 class="font-serif text-2xl font-bold text-charcoal">The Stoic's Path to Peace</h3>
-                                <p class="mt-3 text-slate text-sm leading-relaxed">Can <strong>ancient Roman philosophy</strong> offer a resilient framework for <em>modern anxiety</em>? A dialogue between Seneca and a contemporary psychologist.</p>
+                                <h3 class="text-xl font-bold text-charcoal">The Stoic's Path to Peace</h3>
+                                <p class="mt-3 text-slate text-sm leading-relaxed">Can <strong>ancient Roman philosophy</strong> offer a resilient framework for <em>modern anxiety</em>?</p>
                             </div>
-                            <a href="#" class="mt-6 inline-block text-sm font-bold text-forest-green hover:text-charcoal transition-colors">Explore the Ideas →</a>
+                            <a href="dialogue-stoicism.html" class="mt-6 inline-block text-sm font-semibold text-sage-green hover:text-charcoal transition-colors">Explore the Ideas →</a>
                         </div>
-                        <div class="bg-white rounded-lg border-b-4 border-border-light hover:border-forest-green transition-all duration-300 p-8 flex flex-col shadow-sm hover:shadow-xl">
+                        <div class="bg-white rounded-lg border border-border-color p-8 flex flex-col shadow-sm hover:shadow-xl hover:border-sage-green hover:-translate-y-1 transition-all duration-300">
                             <div class="flex-grow">
-                                <h3 class="font-serif text-2xl font-bold text-charcoal">Zen, Art, and Minimalism</h3>
-                                <p class="mt-3 text-slate text-sm leading-relaxed">Exploring the <strong>deep connection</strong> between <em>Zen Buddhist principles</em> and the modern minimalist lifestyle. Is less truly more?</p>
+                                <h3 class="text-xl font-bold text-charcoal">Zen, Art, and Minimalism</h3>
+                                <p class="mt-3 text-slate text-sm leading-relaxed">Exploring the <strong>deep connection</strong> between <em>Zen Buddhist principles</em> and modern life.</p>
                             </div>
-                            <a href="#" class="mt-6 inline-block text-sm font-bold text-forest-green hover:text-charcoal transition-colors">Find Simplicity →</a>
+                            <a href="dialogue-zen-intro.html" class="mt-6 inline-block text-sm font-semibold text-sage-green hover:text-charcoal transition-colors">Find Simplicity →</a>
                         </div>
                     </div>
                 </div>
             </section>
 
-            <section id="infographics" class="py-16 md-py-24">
-    <div class="container mx-auto px-6 mb-12 text-center max-w-2xl">
-        <h2 class="font-serif font-bold text-4xl md:text-5xl text-charcoal">Concepts Decoded</h2>
-        <p class="mt-4 text-slate leading-relaxed">
-            <em>Visual journeys</em> into the complex landscapes of philosophy and faith. <strong>Drag or scroll to explore.</strong>
-        </p>
-    </div>
+            <section id="infographics" class="py-16 md:py-24">
+                <div class="container mx-auto px-6 mb-12 text-center max-w-2xl">
+                    <h2 class="font-bold text-4xl md:text-5xl tracking-tighter text-charcoal">Concepts Decoded</h2>
+                    <p class="mt-4 text-slate leading-relaxed">
+                        <em>Visual journeys</em> into the complex landscapes of philosophy and faith. <strong>Drag or scroll to explore.</strong>
+                    </p>
+                </div>
+                <div class="w-full overflow-x-auto py-4 scrollbar-hide" style="scroll-snap-type: x mandatory;">
+                    <div class="flex flex-nowrap space-x-8 px-6 sm:px-8 md:px-12 lg:px-24">
+                        <div class="flex-shrink-0 w-5/6 sm:w-1/2 md:w-1/3 lg:w-1/4 relative" style="scroll-snap-align: center;"><a href="branches-of-philosophy-infographic.html" class="group block h-full"><div class="rounded-lg overflow-hidden border border-border-color h-full flex flex-col shadow-sm group-hover:shadow-xl group-hover:-translate-y-1 group-hover:z-10 transition-all duration-300"><img src="https://placehold.co/600x400/F1F5F9/1E293B?text=Infographic" alt="Infographic" class="w-full aspect-video object-cover"><div class="p-6 bg-white flex-grow"><h3 class="text-lg font-bold text-charcoal group-hover:text-sage-green transition-colors">The Branches of Philosophy</h3><p class="mt-2 text-slate text-sm">A <em>visual map</em> of metaphysics, epistemology, ethics, and logic.</p></div></div></a></div>
+                        <div class="flex-shrink-0 w-5/6 sm:w-1/2 md:w-1/3 lg:w-1/4 relative" style="scroll-snap-align: center;"><a href="east-vs-west-infographic.html" class="group block h-full"><div class="rounded-lg overflow-hidden border border-border-color h-full flex flex-col shadow-sm group-hover:shadow-xl group-hover:-translate-y-1 group-hover:z-10 transition-all duration-300"><img src="https://placehold.co/600x400/65816D/FFFFFF?text=Infographic" alt="Infographic" class="w-full aspect-video object-cover"><div class="p-6 bg-white flex-grow"><h3 class="text-lg font-bold text-charcoal group-hover:text-sage-green transition-colors">East vs. West: A World of Ideas</h3><p class="mt-2 text-slate text-sm">Comparing <strong>core concepts</strong> of individualism and collectivism.</p></div></div></a></div>
+                        <div class="flex-shrink-0 w-5/6 sm:w-1/2 md:w-1/3 lg:w-1/4 relative" style="scroll-snap-align: center;"><a href="timeline-of-faith-infographic.html" class="group block h-full"><div class="rounded-lg overflow-hidden border border-border-color h-full flex flex-col shadow-sm group-hover:shadow-xl group-hover:-translate-y-1 group-hover:z-10 transition-all duration-300"><img src="https://placehold.co/600x400/F4E9CD/1E293B?text=Infographic" alt="Infographic" class="w-full aspect-video object-cover"><div class="p-6 bg-white flex-grow"><h3 class="text-lg font-bold text-charcoal group-hover:text-sage-green transition-colors">The Timeline of Faith</h3><p class="mt-2 text-slate text-sm"><em>Tracing the origins</em> and <strong>spread of major world religions</strong>.</p></div></div></a></div>
+                        <div class="flex-shrink-0 w-5/6 sm:w-1/2 md:w-1/3 lg:w-1/4 relative" style="scroll-snap-align: center;"><a href="#" class="group block h-full"><div class="rounded-lg overflow-hidden border border-border-color h-full flex flex-col shadow-sm group-hover:shadow-xl group-hover:-translate-y-1 group-hover:z-10 transition-all duration-300"><img src="https://placehold.co/600x400/F1F5F9/1E293B?text=Infographic" alt="Infographic" class="w-full aspect-video object-cover"><div class="p-6 bg-white flex-grow"><h3 class="text-lg font-bold text-charcoal group-hover:text-sage-green transition-colors">Arguments & Fallacies</h3><p class="mt-2 text-slate text-sm">A visual guide to recognizing common <em>logical fallacies</em> in debates.</p></div></div></a></div>
+                        <div class="flex-shrink-0 w-5/6 sm:w-1/2 md:w-1/3 lg:w-1/4 relative" style="scroll-snap-align: center;"><a href="#" class="group block h-full"><div class="rounded-lg overflow-hidden border border-border-color h-full flex flex-col shadow-sm group-hover:shadow-xl group-hover:-translate-y-1 group-hover:z-10 transition-all duration-300"><img src="https://placehold.co/600x400/1E293B/FFFFFF?text=Infographic" alt="Infographic" class="w-full aspect-video object-cover"><div class="p-6 bg-white flex-grow"><h3 class="text-lg font-bold text-charcoal group-hover:text-sage-green transition-colors">The Four Stoic Virtues</h3><p class="mt-2 text-slate text-sm">An introduction to <strong>Wisdom, Justice, Courage, and Temperance</strong>.</p></div></div></a></div>
+                        <div class="flex-shrink-0 w-5/6 sm:w-1/2 md:w-1/3 lg:w-1/4 relative" style="scroll-snap-align: center;"><a href="#" class="group block h-full"><div class="rounded-lg overflow-hidden border border-border-color h-full flex flex-col shadow-sm group-hover:shadow-xl group-hover:-translate-y-1 group-hover:z-10 transition-all duration-300"><img src="https://placehold.co/600x400/F1F5F9/1E293B?text=Infographic" alt="Infographic" class="w-full aspect-video object-cover"><div class="p-6 bg-white flex-grow"><h3 class="text-lg font-bold text-charcoal group-hover:text-sage-green transition-colors">Existentialist Thinkers</h3><p class="mt-2 text-slate text-sm">Exploring the ideas of <em>Kierkegaard, Sartre, and Camus</em>.</p></div></div></a></div>
+                        <div class="flex-shrink-0 w-5/6 sm:w-1/2 md:w-1/3 lg:w-1/4 relative" style="scroll-snap-align: center;"><a href="#" class="group block h-full"><div class="rounded-lg overflow-hidden border border-border-color h-full flex flex-col shadow-sm group-hover:shadow-xl group-hover:-translate-y-1 group-hover:z-10 transition-all duration-300"><img src="https://placehold.co/600x400/65816D/FFFFFF?text=Infographic" alt="Infographic" class="w-full aspect-video object-cover"><div class="p-6 bg-white flex-grow"><h3 class="text-lg font-bold text-charcoal group-hover:text-sage-green transition-colors">The Veil of Maya</h3><p class="mt-2 text-slate text-sm">A visual explanation of the concept of <em>illusion</em> in <strong>Hindu philosophy</strong>.</p></div></div></a></div>
+                        <div class="flex-shrink-0 w-5/6 sm:w-1/2 md:w-1/3 lg:w-1/4 relative" style="scroll-snap-align: center;"><a href="#" class="group block h-full"><div class="rounded-lg overflow-hidden border border-border-color h-full flex flex-col shadow-sm group-hover:shadow-xl group-hover:-translate-y-1 group-hover:z-10 transition-all duration-300"><img src="https://placehold.co/600x400/F4E9CD/1E293B?text=Infographic" alt="Infographic" class="w-full aspect-video object-cover"><div class="p-6 bg-white flex-grow"><h3 class="text-lg font-bold text-charcoal group-hover:text-sage-green transition-colors">Plato's Cave</h3><p class="mt-2 text-slate text-sm">A <em>step-by-step</em> visual guide to the famous <strong>allegory</strong>.</p></div></div></a></div>
+                        <div class="flex-shrink-0 w-5/6 sm:w-1/2 md:w-1/3 lg:w-1/4 relative" style="scroll-snap-align: center;"><a href="#" class="group block h-full"><div class="rounded-lg overflow-hidden border border-border-color h-full flex flex-col shadow-sm group-hover:shadow-xl group-hover:-translate-y-1 group-hover:z-10 transition-all duration-300"><img src="https://placehold.co/600x400/1E293B/FFFFFF?text=Infographic" alt="Infographic" class="w-full aspect-video object-cover"><div class="p-6 bg-white flex-grow"><h3 class="text-lg font-bold text-charcoal group-hover:text-sage-green transition-colors">The World of Rumi</h3><p class="mt-2 text-slate text-sm">Key themes and metaphors in the poetry of the <strong>Sufi mystic</strong>.</p></div></div></a></div>
+                        <div class="flex-shrink-0 w-5/6 sm:w-1/2 md:w-1/3 lg:w-1/4 relative" style="scroll-snap-align: center;"><a href="#" class="group block h-full"><div class="rounded-lg overflow-hidden border border-border-color h-full flex flex-col shadow-sm group-hover:shadow-xl group-hover:-translate-y-1 group-hover:z-10 transition-all duration-300"><img src="https://placehold.co/600x400/65816D/FFFFFF?text=Infographic" alt="Infographic" class="w-full aspect-video object-cover"><div class="p-6 bg-white flex-grow"><h3 class="text-lg font-bold text-charcoal group-hover:text-sage-green transition-colors">The World of Ibn Arabi</h3><p class="mt-2 text-slate text-sm">A visual exploration of <em>Wahdat al-Wujud</em> from the great <strong>Sufi master</strong>.</p></div></div></a></div>
+                        <div class="flex-shrink-0 w-5/6 sm:w-1/2 md:w-1/3 lg:w-1/4 relative" style="scroll-snap-align: center;"><a href="#" class="group block h-full"><div class="rounded-lg overflow-hidden border border-border-color h-full flex flex-col shadow-sm group-hover:shadow-xl group-hover:-translate-y-1 group-hover:z-10 transition-all duration-300"><img src="https://placehold.co/600x400/F4E9CD/1E293B?text=Infographic" alt="Infographic" class="w-full aspect-video object-cover"><div class="p-6 bg-white flex-grow"><h3 class="text-lg font-bold text-charcoal group-hover:text-sage-green transition-colors">The Philosophy of Madhvacharya</h3><p class="mt-2 text-slate text-sm">Decoding <strong>Dvaita Vedanta</strong>: The eternal <em>distinction between the soul and the Supreme</em>.</p></div></div></a></div>
+                        <div class="flex-shrink-0 w-5/6 sm:w-1/2 md:w-1/3 lg:w-1/4 relative" style="scroll-snap-align: center;"><a href="#" class="group block h-full"><div class="rounded-lg overflow-hidden border border-border-color h-full flex flex-col shadow-sm group-hover:shadow-xl group-hover:-translate-y-1 group-hover:z-10 transition-all duration-300"><img src="https://placehold.co/600x400/F1F5F9/1E293B?text=Infographic" alt="Infographic" class="w-full aspect-video object-cover"><div class="p-6 bg-white flex-grow"><h3 class="text-lg font-bold text-charcoal group-hover:text-sage-green transition-colors">The Path of Ramanuja</h3><p class="mt-2 text-slate text-sm">Visualizing <em>Vishishtadvaita</em>: How souls are real attributes of the <strong>one, qualified Brahman</strong>.</p></div></div></a></div>
+                        <div class="flex-shrink-0 w-5/6 sm:w-1/2 md:w-1/3 lg:w-1/4 relative" style="scroll-snap-align: center;"><a href="#" class="group block h-full"><div class="rounded-lg overflow-hidden border border-border-color h-full flex flex-col shadow-sm group-hover:shadow-xl group-hover:-translate-y-1 group-hover:z-10 transition-all duration-300"><img src="https://placehold.co/600x400/1E293B/FFFFFF?text=Infographic" alt="Infographic" class="w-full aspect-video object-cover"><div class="p-6 bg-white flex-grow"><h3 class="text-lg font-bold text-charcoal group-hover:text-sage-green transition-colors">The Non-Dualism of Shankara</h3><p class="mt-2 text-slate text-sm">A guide to <strong>Advaita Vedanta</strong>, exploring the concepts of <em>Brahman, Atman, and Maya</em>.</p></div></div></a></div>
+                        <div class="flex-shrink-0 w-5/6 sm:w-1/2 md:w-1/3 lg:w-1/4 relative" style="scroll-snap-align: center;"><a href="#" class="group block h-full"><div class="rounded-lg overflow-hidden border border-border-color h-full flex flex-col shadow-sm group-hover:shadow-xl group-hover:-translate-y-1 group-hover:z-10 transition-all duration-300"><img src="https://placehold.co/600x400/65816D/FFFFFF?text=Infographic" alt="Infographic" class="w-full aspect-video object-cover"><div class="p-6 bg-white flex-grow"><h3 class="text-lg font-bold text-charcoal group-hover:text-sage-green transition-colors">The Wisdom of Ramana Maharshi</h3><p class="mt-2 text-slate text-sm">A visual journey into the practice of <em>self-enquiry</em> and the profound question, <strong>'Who am I?'</strong>.</p></div></div></a></div>
+                        <div class="flex-shrink-0 w-5/6 sm:w-1/2 md:w-1/3 lg:w-1/4 relative" style="scroll-snap-align: center;"><a href="#" class="group block h-full"><div class="rounded-lg overflow-hidden border border-border-color h-full flex flex-col shadow-sm group-hover:shadow-xl group-hover:-translate-y-1 group-hover:z-10 transition-all duration-300"><img src="https://placehold.co/600x400/F1F5F9/1E293B?text=Infographic" alt="Infographic" class="w-full aspect-video object-cover"><div class="p-6 bg-white flex-grow"><h3 class="text-lg font-bold text-charcoal group-hover:text-sage-green transition-colors">The Fire of Shams Tabrizi</h3><p class="mt-2 text-slate text-sm">Exploring the <strong>transformative companionship</strong> between <em>Shams and Rumi</em> through their poetry.</p></div></div></a></div>
+                        <div class="flex-shrink-0 w-5/6 sm:w-1/2 md:w-1/3 lg:w-1/4 relative" style="scroll-snap-align: center;"><a href="#" class="group block h-full"><div class="rounded-lg overflow-hidden border border-border-color h-full flex flex-col shadow-sm group-hover:shadow-xl group-hover:-translate-y-1 group-hover:z-10 transition-all duration-300"><img src="https://placehold.co/600x400/F4E9CD/1E293B?text=Infographic" alt="Infographic" class="w-full aspect-video object-cover"><div class="p-6 bg-white flex-grow"><h3 class="text-lg font-bold text-charcoal group-hover:text-sage-green transition-colors">The Reason of Averroes</h3><p class="mt-2 text-slate text-sm">A visual map of how <em>Ibn Rushd</em> sought to harmonize <strong>Aristotelian philosophy</strong> with scripture.</p></div></div></a></div>
+                        <div class="flex-shrink-0 w-5/6 sm:w-1/2 md:w-1/3 lg:w-1/4 relative" style="scroll-snap-align: center;"><a href="#" class="group block h-full"><div class="rounded-lg overflow-hidden border border-border-color h-full flex flex-col shadow-sm group-hover:shadow-xl group-hover:-translate-y-1 group-hover:z-10 transition-all duration-300"><img src="https://placehold.co/600x400/1E293B/FFFFFF?text=Infographic" alt="Infographic" class="w-full aspect-video object-cover"><div class="p-6 bg-white flex-grow"><h3 class="text-lg font-bold text-charcoal group-hover:text-sage-green transition-colors">The Logic of Avicenna</h3><p class="mt-2 text-slate text-sm">An infographic on the influential ideas of <em>Ibn Sina</em>, from the <strong>'Necessary Being'</strong> to his work in logic.</p></div></div></a></div>
+                    </div>
+                </div>
+            </section>
 
-    <div class="w-full overflow-x-auto pb-10 scrollbar-hide" style="scroll-snap-type: x mandatory;">
-        <div class="flex flex-nowrap space-x-8 px-6 sm:px-8 md:px-12 lg:px-24">
+            <section class="py-16 md:py-24">
+                <div class="container mx-auto px-6 grid md:grid-cols-2 gap-12 items-center max-w-5xl">
+                     <div>
+                        <h2 class="font-bold text-4xl md:text-5xl tracking-tighter text-charcoal">Our Quest</h2>
+                        <p class="mt-4 text-slate leading-relaxed">In a world of noise, <em>clarity is rare</em>. Our mission is to create a <strong>quiet space for contemplation</strong>. We don't chase headlines or controversies; we explore the <strong>timeless questions</strong> that have shaped civilizations.</p>
+                    </div>
+                    <div class="text-center p-6 bg-white rounded-lg border border-border-color">
+                        <span class="font-serif text-6xl text-sage-green/30">“</span>
+                        <p class="font-sans text-xl italic text-slate -mt-6">The highest form of knowledge is empathy, for it requires us to suspend our egos and live in another's world.</p>
+                    </div>
+                </div>
+            </section>
 
-            <div class="flex-shrink-0 w-5/6 sm:w-1/2 md:w-1/3 lg:w-1/4" style="scroll-snap-align: center;">
-                <a href="#" class="group block h-full">
-                    <div class="rounded-lg overflow-hidden border border-border-light group-hover:shadow-xl transition-all duration-300 h-full flex flex-col">
-                        <img src="https://placehold.co/600x400/F5F5F4/36454F?text=Infographic" alt="Infographic about the branches of philosophy" class="w-full aspect-video object-cover">
-                        <div class="p-6 bg-white flex-grow">
-                            <h3 class="font-serif text-xl font-bold text-charcoal group-hover:text-forest-green transition-colors">The Branches of Philosophy</h3>
-                            <p class="mt-2 text-slate text-sm">A <em>visual map</em> of metaphysics, epistemology, ethics, and logic.</p>
-                        </div>
-                    </div>
-                </a>
-            </div>
-
-            <div class="flex-shrink-0 w-5/6 sm:w-1/2 md:w-1/3 lg:w-1/4" style="scroll-snap-align: center;">
-                <a href="#" class="group block h-full">
-                     <div class="rounded-lg overflow-hidden border border-border-light group-hover:shadow-xl transition-all duration-300 h-full flex flex-col">
-                        <img src="https://placehold.co/600x400/22543D/FFFFFF?text=Infographic" alt="Infographic comparing Eastern and Western thought" class="w-full aspect-video object-cover">
-                        <div class="p-6 bg-white flex-grow">
-                            <h3 class="font-serif text-xl font-bold text-charcoal group-hover:text-forest-green transition-colors">East vs. West: A World of Ideas</h3>
-                            <p class="mt-2 text-slate text-sm">Comparing <strong>core concepts</strong> of individualism and collectivism.</p>
-                        </div>
-                    </div>
-                </a>
-            </div>
-
-            <div class="flex-shrink-0 w-5/6 sm:w-1/2 md:w-1/3 lg:w-1/4" style="scroll-snap-align: center;">
-                <a href="#" class="group block h-full">
-                     <div class="rounded-lg overflow-hidden border border-border-light group-hover:shadow-xl transition-all duration-300 h-full flex flex-col">
-                        <img src="https://placehold.co/600x400/E17055/FFFFFF?text=Infographic" alt="Infographic on the timeline of major world religions" class="w-full aspect-video object-cover">
-                        <div class="p-6 bg-white flex-grow">
-                            <h3 class="font-serif text-xl font-bold text-charcoal group-hover:text-forest-green transition-colors">The Timeline of Faith</h3>
-                            <p class="mt-2 text-slate text-sm"><em>Tracing the origins</em> and <strong>spread of major world religions</strong>.</p>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="flex-shrink-0 w-5/6 sm:w-1/2 md:w-1/3 lg:w-1/4" style="scroll-snap-align: center;">
-                <a href="#" class="group block h-full">
-                     <div class="rounded-lg overflow-hidden border border-border-light group-hover:shadow-xl transition-all duration-300 h-full flex flex-col">
-                        <img src="https://placehold.co/600x400/F5F5F4/36454F?text=Infographic" alt="Infographic about logical fallacies" class="w-full aspect-video object-cover">
-                        <div class="p-6 bg-white flex-grow">
-                            <h3 class="font-serif text-xl font-bold text-charcoal group-hover:text-forest-green transition-colors">Arguments & Fallacies</h3>
-                            <p class="mt-2 text-slate text-sm">A visual guide to recognizing common <em>logical fallacies</em> in debates.</p>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="flex-shrink-0 w-5/6 sm:w-1/2 md:w-1/3 lg:w-1/4" style="scroll-snap-align: center;">
-                <a href="#" class="group block h-full">
-                     <div class="rounded-lg overflow-hidden border border-border-light group-hover:shadow-xl transition-all duration-300 h-full flex flex-col">
-                        <img src="https://placehold.co/600x400/36454F/FFFFFF?text=Infographic" alt="Infographic on Stoic virtues" class="w-full aspect-video object-cover">
-                        <div class="p-6 bg-white flex-grow">
-                            <h3 class="font-serif text-xl font-bold text-charcoal group-hover:text-forest-green transition-colors">The Four Stoic Virtues</h3>
-                            <p class="mt-2 text-slate text-sm">An introduction to <strong>Wisdom, Justice, Courage, and Temperance</strong>.</p>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="flex-shrink-0 w-5/6 sm:w-1/2 md:w-1/3 lg:w-1/4" style="scroll-snap-align: center;">
-                <a href="#" class="group block h-full">
-                     <div class="rounded-lg overflow-hidden border border-border-light group-hover:shadow-xl transition-all duration-300 h-full flex flex-col">
-                        <img src="https://placehold.co/600x400/F5F5F4/36454F?text=Infographic" alt="Infographic about existentialism" class="w-full aspect-video object-cover">
-                        <div class="p-6 bg-white flex-grow">
-                            <h3 class="font-serif text-xl font-bold text-charcoal group-hover:text-forest-green transition-colors">Existentialist Thinkers</h3>
-                            <p class="mt-2 text-slate text-sm">Exploring the ideas of <em>Kierkegaard, Sartre, and Camus</em>.</p>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="flex-shrink-0 w-5/6 sm:w-1/2 md:w-1/3 lg:w-1/4" style="scroll-snap-align: center;">
-                <a href="#" class="group block h-full">
-                     <div class="rounded-lg overflow-hidden border border-border-light group-hover:shadow-xl transition-all duration-300 h-full flex flex-col">
-                        <img src="https://placehold.co/600x400/22543D/FFFFFF?text=Infographic" alt="Infographic on the concept of Maya" class="w-full aspect-video object-cover">
-                        <div class="p-6 bg-white flex-grow">
-                            <h3 class="font-serif text-xl font-bold text-charcoal group-hover:text-forest-green transition-colors">The Veil of Maya</h3>
-                            <p class="mt-2 text-slate text-sm">A visual explanation of the concept of <em>illusion</em> in <strong>Hindu philosophy</strong>.</p>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="flex-shrink-0 w-5/6 sm:w-1/2 md:w-1/3 lg:w-1/4" style="scroll-snap-align: center;">
-                <a href="#" class="group block h-full">
-                     <div class="rounded-lg overflow-hidden border border-border-light group-hover:shadow-xl transition-all duration-300 h-full flex flex-col">
-                        <img src="https://placehold.co/600x400/E17055/FFFFFF?text=Infographic" alt="Infographic on Plato's Allegory of the Cave" class="w-full aspect-video object-cover">
-                        <div class="p-6 bg-white flex-grow">
-                            <h3 class="font-serif text-xl font-bold text-charcoal group-hover:text-forest-green transition-colors">Plato's Cave</h3>
-                            <p class="mt-2 text-slate text-sm">A <em>step-by-step</em> visual guide to the famous <strong>allegory</strong>.</p>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="flex-shrink-0 w-5/6 sm:w-1/2 md:w-1/3 lg:w-1/4" style="scroll-snap-align: center;">
-                <a href="#" class="group block h-full">
-                     <div class="rounded-lg overflow-hidden border border-border-light group-hover:shadow-xl transition-all duration-300 h-full flex flex-col">
-                        <img src="https://placehold.co/600x400/36454F/FFFFFF?text=Infographic" alt="Infographic on Rumi's poetry" class="w-full aspect-video object-cover">
-                        <div class="p-6 bg-white flex-grow">
-                            <h3 class="font-serif text-xl font-bold text-charcoal group-hover:text-forest-green transition-colors">The World of Rumi</h3>
-                            <p class="mt-2 text-slate text-sm">Key themes and metaphors in the poetry of the <strong>Sufi mystic</strong>.</p>
-                        </div>
-                    </div>
-                </a>
-            </div>
-
-            <div class="flex-shrink-0 w-5/6 sm:w-1/2 md:w-1/3 lg:w-1/4" style="scroll-snap-align: center;">
-                <a href="#" class="group block h-full">
-                     <div class="rounded-lg overflow-hidden border border-border-light group-hover:shadow-xl transition-all duration-300 h-full flex flex-col">
-                        <img src="https://placehold.co/600x400/22543D/FFFFFF?text=Infographic" alt="Infographic on Ibn Arabi's philosophy" class="w-full aspect-video object-cover">
-                        <div class="p-6 bg-white flex-grow">
-                            <h3 class="font-serif text-xl font-bold text-charcoal group-hover:text-forest-green transition-colors">The World of Ibn Arabi</h3>
-                            <p class="mt-2 text-slate text-sm">A visual exploration of <em>Wahdat al-Wujud</em> (the Unity of Being) from the great <strong>Sufi master</strong>.</p>
-                        </div>
-                    </div>
-                </a>
-            </div>
-
-            <div class="flex-shrink-0 w-5/6 sm:w-1/2 md:w-1/3 lg:w-1/4" style="scroll-snap-align: center;">
-                <a href="#" class="group block h-full">
-                     <div class="rounded-lg overflow-hidden border border-border-light group-hover:shadow-xl transition-all duration-300 h-full flex flex-col">
-                        <img src="https://placehold.co/600x400/E17055/FFFFFF?text=Infographic" alt="Infographic on Madhvacharya's philosophy" class="w-full aspect-video object-cover">
-                        <div class="p-6 bg-white flex-grow">
-                            <h3 class="font-serif text-xl font-bold text-charcoal group-hover:text-forest-green transition-colors">The Philosophy of Madhvacharya</h3>
-                            <p class="mt-2 text-slate text-sm">Decoding <strong>Dvaita Vedanta</strong>: The eternal <em>distinction between the soul and the Supreme</em>.</p>
-                        </div>
-                    </div>
-                </a>
-            </div>
-
-            <div class="flex-shrink-0 w-5/6 sm:w-1/2 md:w-1/3 lg:w-1/4" style="scroll-snap-align: center;">
-                <a href="#" class="group block h-full">
-                     <div class="rounded-lg overflow-hidden border border-border-light group-hover:shadow-xl transition-all duration-300 h-full flex flex-col">
-                        <img src="https://placehold.co/600x400/F5F5F4/36454F?text=Infographic" alt="Infographic on Ramanuja's philosophy" class="w-full aspect-video object-cover">
-                        <div class="p-6 bg-white flex-grow">
-                            <h3 class="font-serif text-xl font-bold text-charcoal group-hover:text-forest-green transition-colors">The Path of Ramanuja</h3>
-                            <p class="mt-2 text-slate text-sm">Visualizing <em>Vishishtadvaita</em>: How souls are real attributes of the <strong>one, qualified Brahman</strong>.</p>
-                        </div>
-                    </div>
-                </a>
-            </div>
-
-            <div class="flex-shrink-0 w-5/6 sm:w-1/2 md:w-1/3 lg:w-1/4" style="scroll-snap-align: center;">
-                <a href="#" class="group block h-full">
-                     <div class="rounded-lg overflow-hidden border border-border-light group-hover:shadow-xl transition-all duration-300 h-full flex flex-col">
-                        <img src="https://placehold.co/600x400/36454F/FFFFFF?text=Infographic" alt="Infographic on Shankaracharya's philosophy" class="w-full aspect-video object-cover">
-                        <div class="p-6 bg-white flex-grow">
-                            <h3 class="font-serif text-xl font-bold text-charcoal group-hover:text-forest-green transition-colors">The Non-Dualism of Shankara</h3>
-                            <p class="mt-2 text-slate text-sm">A guide to <strong>Advaita Vedanta</strong>, exploring the concepts of <em>Brahman, Atman, and Maya</em>.</p>
-                        </div>
-                    </div>
-                </a>
-            </div>
-
-            <div class="flex-shrink-0 w-5/6 sm:w-1/2 md:w-1/3 lg:w-1/4" style="scroll-snap-align: center;">
-                <a href="#" class="group block h-full">
-                     <div class="rounded-lg overflow-hidden border border-border-light group-hover:shadow-xl transition-all duration-300 h-full flex flex-col">
-                        <img src="https://placehold.co/600x400/22543D/FFFFFF?text=Infographic" alt="Infographic on Ramana Maharshi's teachings" class="w-full aspect-video object-cover">
-                        <div class="p-6 bg-white flex-grow">
-                            <h3 class="font-serif text-xl font-bold text-charcoal group-hover:text-forest-green transition-colors">The Wisdom of Ramana Maharshi</h3>
-                            <p class="mt-2 text-slate text-sm">A visual journey into the practice of <em>self-enquiry</em> and the profound question, <strong>'Who am I?'</strong>.</p>
-                        </div>
-                    </div>
-                </a>
-            </div>
-
-            <div class="flex-shrink-0 w-5/6 sm:w-1/2 md:w-1/3 lg:w-1/4" style="scroll-snap-align: center;">
-                <a href="#" class="group block h-full">
-                     <div class="rounded-lg overflow-hidden border border-border-light group-hover:shadow-xl transition-all duration-300 h-full flex flex-col">
-                        <img src="https://placehold.co/600x400/F5F5F4/36454F?text=Infographic" alt="Infographic on Shams Tabrizi and Rumi" class="w-full aspect-video object-cover">
-                        <div class="p-6 bg-white flex-grow">
-                            <h3 class="font-serif text-xl font-bold text-charcoal group-hover:text-forest-green transition-colors">The Fire of Shams Tabrizi</h3>
-                            <p class="mt-2 text-slate text-sm">Exploring the <strong>transformative companionship</strong> between <em>Shams and Rumi</em> through their poetry.</p>
-                        </div>
-                    </div>
-                </a>
-            </div>
-
-            <div class="flex-shrink-0 w-5/6 sm:w-1/2 md:w-1/3 lg:w-1/4" style="scroll-snap-align: center;">
-                <a href="#" class="group block h-full">
-                     <div class="rounded-lg overflow-hidden border border-border-light group-hover:shadow-xl transition-all duration-300 h-full flex flex-col">
-                        <img src="https://placehold.co/600x400/E17055/FFFFFF?text=Infographic" alt="Infographic on Averroes' philosophy" class="w-full aspect-video object-cover">
-                        <div class="p-6 bg-white flex-grow">
-                            <h3 class="font-serif text-xl font-bold text-charcoal group-hover:text-forest-green transition-colors">The Reason of Averroes</h3>
-                            <p class="mt-2 text-slate text-sm">A visual map of how <em>Ibn Rushd</em> sought to harmonize <strong>Aristotelian philosophy</strong> with scripture.</p>
-                        </div>
-                    </div>
-                </a>
-            </div>
-
-            <div class="flex-shrink-0 w-5/6 sm:w-1/2 md:w-1/3 lg:w-1/4" style="scroll-snap-align: center;">
-                <a href="#" class="group block h-full">
-                     <div class="rounded-lg overflow-hidden border border-border-light group-hover:shadow-xl transition-all duration-300 h-full flex flex-col">
-                        <img src="https://placehold.co/600x400/36454F/FFFFFF?text=Infographic" alt="Infographic on Avicenna's philosophy" class="w-full aspect-video object-cover">
-                        <div class="p-6 bg-white flex-grow">
-                            <h3 class="font-serif text-xl font-bold text-charcoal group-hover:text-forest-green transition-colors">The Logic of Avicenna</h3>
-                            <p class="mt-2 text-slate text-sm">An infographic on the influential ideas of <em>Ibn Sina</em>, from the <strong>'Necessary Being'</strong> to his work in logic.</p>
-                        </div>
-                    </div>
-                </a>
-            </div>
-
-        </div>
-    </div>
-</section>
+            <section class="py-16 md:py-24 bg-white border-y border-border-color">
+                 <div class="container mx-auto px-6 text-center max-w-2xl">
+                    <h2 class="font-bold text-4xl md:text-5xl tracking-tighter text-charcoal">Join the Conversation</h2>
+                    <p class="mt-4 text-slate leading-relaxed">
+                        Receive <strong>new dialogues</strong> and <em>reflections</em> directly in your inbox. No spam, just a periodic dose of <strong>thoughtful exploration</strong>.
+                    </p>
+                    <form class="mt-8 flex flex-col md:flex-row gap-4 max-w-lg mx-auto">
+                        <input type="email" placeholder="Enter your email address" class="w-full px-5 py-3 rounded-md border border-border-color bg-stone focus:ring-2 focus:ring-sage-green focus:outline-none transition-shadow text-charcoal">
+                        <button type="submit" class="font-bold text-white bg-charcoal rounded-md py-3 px-8 transition-all duration-300 hover:bg-sage-green">
+                            Subscribe
+                        </button>
+                    </form>
+                 </div>
+            </section>
 
         </main>
 
-        <footer class="mt-auto border-t border-border-light bg-white">
+        <footer class="mt-auto border-t border-border-color bg-white">
             <div class="container mx-auto px-6 py-8 text-center text-slate text-sm">
                 <p>&copy; 2025 The Philosophical Compass. All Rights Reserved.</p>
             </div>
         </footer>
     </div>
-    <!-- PASTE THIS SCRIPT TAG JUST BEFORE THE CLOSING </body> TAG -->
+    
     <script>
         const menuBtn = document.getElementById('menu-btn');
         const mobileMenu = document.getElementById('mobile-menu');
 
-    menuBtn.addEventListener('click', () => {
-        mobileMenu.classList.toggle('hidden');
-    });
-</script>
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var options = {
+                strings: ['Clarity', 'Curiosity', 'Understanding', 'Wisdom', 'Intellect', 'Faith', 'Religion', 'Philosophy'],
+                typeSpeed: 70,
+                backSpeed: 40,
+                backDelay: 2000,
+                startDelay: 500,
+                loop: true,
+            };
+            var typed = new Typed('#typed-text', options);
+        });
+    </script>
 </body>
 </html>

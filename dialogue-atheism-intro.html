@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The God Debate: Atheism vs. Theism | The Philosophical Compass</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        // Zen Garden Palette
+                        'stone': '#F1F5F9',        
+                        'white': '#FFFFFF',
+                        'charcoal': '#1E293B',     
+                        'slate': '#64748B',        
+                        'sage-green': '#65816D',  
+                        'sand': '#F4E9CD',          
+                        'border-color': '#E2E8F0',  
+                    },
+                    fontFamily: {
+                        'sans': ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        html { scroll-behavior: smooth; }
+        ::selection { background-color: #65816D; color: #ffffff; }
+        strong { font-weight: 700; color: #1E293B; }
+        em { font-style: italic; color: #65816D; }
+    </style>
+</head>
+
+<body class="font-sans bg-stone text-charcoal antialiased">
+    <div class="min-h-screen">
+
+        <header class="sticky top-0 z-50 bg-stone/80 backdrop-blur-md border-b border-border-color">
+            <nav class="container mx-auto px-6 py-4">
+                <div class="flex justify-between items-center">
+                    <a href="index.html" class="font-extrabold text-2xl tracking-tight text-charcoal">
+                        The Philosophical <span class="text-sage-green">Compass</span>
+                    </a>
+                    <ul class="hidden md:flex items-center space-x-8 text-sm font-semibold">
+                        <li><a href="dialogues.html" class="text-sage-green">Dialogues</a></li>
+                        <li><a href="themes.html" class="text-slate hover:text-sage-green transition-colors duration-300">Themes</a></li>
+                        <li><a href="about.html" class="text-slate hover:text-sage-green transition-colors duration-300">About</a></li>
+                        <li><a href="subscribe.html" class="text-slate hover:text-sage-green transition-colors duration-300">Subscribe</a></li>
+                    </ul>
+                    <div class="md:hidden">
+                        <button id="menu-btn" class="text-charcoal hover:text-sage-green focus:outline-none">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                        </button>
+                    </div>
+                </div>
+                <div id="mobile-menu" class="hidden md:hidden mt-4">
+                    <ul class="flex flex-col space-y-4">
+                        <li><a href="dialogues.html" class="block py-2 text-sage-green font-bold">Dialogues</a></li>
+                        <li><a href="themes.html" class="block py-2 text-slate font-bold hover:text-sage-green">Themes</a></li>
+                        <li><a href="about.html" class="block py-2 text-slate font-bold hover:text-sage-green">About</a></li>
+                        <li><a href="subscribe.html" class="block py-2 text-slate font-bold hover:text-sage-green">Subscribe</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+
+        <main class="container mx-auto px-6 py-16 md:py-24">
+
+            <div class="max-w-4xl mx-auto">
+
+                <section class="bg-white rounded-lg shadow-sm p-8 md:p-12 border border-border-color">
+                    <h1 class="font-extrabold text-4xl md:text-6xl text-charcoal text-center leading-tight tracking-tighter">
+                        The God Debate
+                    </h1>
+                    <p class="text-center mt-4 text-lg text-slate">A Dialogue on Atheism and Theism</p>
+                    <hr class="my-8 border-t border-border-color">
+
+                    <div class="space-y-6 text-base leading-relaxed text-slate">
+                        <p>In the grand intellectual theatre of human history, no question has commanded more attention than the question of God. Is the universe a product of purposeless matter and chance, or the deliberate creation of a conscious Creator? Today, we convene a historic summit of the mind, pitting the most formidable arguments of modern atheism against the sophisticated reasoning of classical Islamic philosophy.</p>
+
+                        <div class="my-8 p-6 bg-stone/50 rounded-lg">
+                            <h2 class="font-bold text-xl text-charcoal mb-4">Representing the Atheist Position:</h2>
+                            <ul class="space-y-3 text-sm">
+                                <li><strong>Bertrand Russell:</strong> Demanding empirical evidence for all claims.</li>
+                                <li><strong>Richard Dawkins:</strong> Arguing for natural selection as a complete explanation for life's complexity.</li>
+                                <li><strong>Christopher Hitchens:</strong> Putting religion itself on trial for its historical harms.</li>
+                                <li><strong>Sam Harris:</strong> Contending that morality must be grounded in science, not divine command.</li>
+                                <li><strong>Friedrich Nietzsche:</strong> Announcing the "death of God" as a cultural event forcing humanity to create its own meaning.</li>
+                            </ul>
+                        </div>
+
+                        <div class="my-8 p-6 bg-stone/50 rounded-lg">
+                            <h2 class="font-bold text-xl text-charcoal mb-4">Representing the Theist Position (from Islamic Philosophy):</h2>
+                            <ul class="space-y-3 text-sm">
+                                <li><strong>Ibn Sīnā (Avicenna):</strong> Arguing for God as the 'Necessary Existent'—the uncaused cause of all things.</li>
+                                <li><strong>Al-Ghazālī:</strong> Championing the limits of pure reason and the necessity of divine revelation.</li>
+                                <li><strong>Ibn Rushd (Averroes):</strong> Defending the harmony between philosophical truth and religious truth.</li>
+                                <li><strong>Fakhr al-Dīn al-Rāzī:</strong> Synthesizing theology and logic into a comprehensive rational defense of faith.</li>
+                            </ul>
+                        </div>
+
+                        <p>This debate matters because it addresses the central anxiety of the modern age: Are we living in a meaningless, material universe, or a purposeful, created one? Join us as we explore arguments on the problem of evil, the basis of morality, and the very foundation of reality. The court is reason. The evidence is logic.</p>
+                    </div>
+
+                    <div class="mt-10 text-center">
+                        <a href="dialogue-atheism-section-1.html" class="inline-block font-bold text-white bg-sage-green rounded-md py-3 px-8 transition-all duration-300 hover:bg-charcoal hover:shadow-lg hover:-translate-y-1">
+                            Begin the Dialogue
+                        </a>
+                    </div>
+                </section>
+
+            </div>
+        </main>
+
+        <footer class="mt-16 border-t border-border-color bg-white">
+            <div class="container mx-auto px-6 py-8 text-center text-slate text-sm">
+                <p>&copy; 2025 The Philosophical Compass. All Rights Reserved.</p>
+            </div>
+        </footer>
+    </div>
+    
+    <script>
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>

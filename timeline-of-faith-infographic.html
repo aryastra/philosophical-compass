@@ -1,0 +1,1134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Timeline of Faith | The Philosophical Compass</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        // Zen Garden Palette
+                        'stone': '#F1F5F9',        
+                        'white': '#FFFFFF',
+                        'charcoal': '#1E293B',     
+                        'slate': '#64748B',        
+                        'sage-green': '#65816D',  
+                        'sand': '#F4E9CD',          
+                        'border-color': '#E2E8F0',
+                    },
+                    fontFamily: {
+                        'sans': ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        html { scroll-behavior: smooth; }
+        ::selection { background-color: #65816D; color: #ffffff; }
+        strong { font-weight: 700; color: #1E293B; }
+        em { font-style: italic; color: #65816D; }
+
+        /* Styles for interactive accordion/details */
+        summary::-webkit-details-marker {
+            display: none;
+        }
+        summary {
+            list-style: none;
+        }
+        details[open] summary ~ * {
+            animation: sweep .5s ease-in-out;
+        }
+        @keyframes sweep {
+            0%    {opacity: 0; transform: translateY(-10px)}
+            100%  {opacity: 1; transform: translateY(0)}
+        }
+    </style>
+</head>
+
+<body class="font-sans bg-stone text-charcoal antialiased">
+
+    <header class="sticky top-0 z-50 bg-stone/80 backdrop-blur-md border-b border-border-color">
+        <nav class="container mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <a href="index.html" class="font-extrabold text-2xl tracking-tight text-charcoal">
+                    The Philosophical <span class="text-sage-green">Compass</span>
+                </a>
+                <ul class="hidden md:flex items-center space-x-8 text-sm font-semibold">
+                    <li><a href="dialogues.html" class="text-slate hover:text-sage-green transition-colors duration-300">Dialogues</a></li>
+                    <li><a href="themes.html" class="text-sage-green">Themes</a></li>
+                    <li><a href="about.html" class="text-slate hover:text-sage-green transition-colors duration-300">About</a></li>
+                    <li><a href="subscribe.html" class="text-slate hover:text-sage-green transition-colors duration-300">Subscribe</a></li>
+                </ul>
+                <div class="md:hidden">
+                    <button id="menu-btn" class="text-charcoal hover:text-sage-green focus:outline-none">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                    </button>
+                </div>
+            </div>
+            <div id="mobile-menu" class="hidden md:hidden mt-4">
+                <ul class="flex flex-col space-y-4">
+                    <li><a href="dialogues.html" class="block py-2 text-slate font-bold hover:text-sage-green">Dialogues</a></li>
+                    <li><a href="themes.html" class="block py-2 text-sage-green font-bold">Themes</a></li>
+                    <li><a href="about.html" class="block py-2 text-slate font-bold hover:text-sage-green">About</a></li>
+                    <li><a href="subscribe.html" class="block py-2 text-slate font-bold hover:text-sage-green">Subscribe</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container mx-auto p-4 sm:p-6 lg:p-8 py-16">
+
+    <header class="text-center mb-12">
+        <h1 class="text-4xl md:text-6xl font-extrabold text-charcoal leading-tight tracking-tighter">The Timeline of Faith</h1>
+        <p class="text-lg text-slate max-w-3xl mx-auto mt-4 leading-relaxed">
+            The quest for meaning has led humans to a wide range of spiritual practices. This visual journey looks at the origins, developments, and fundamental concepts of the world's major religions, showing how they profoundly impacted human history.
+        </p>
+    </header>
+
+<section class="my-16 md:my-24">
+    <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold text-charcoal">A Journey Through Time: The Birth of Major Faiths</h2>
+        <p class="text-slate max-w-3xl mx-auto mt-2">Religions have emerged and evolved at different points in human history, often building upon one another. This timeline highlights the approximate origins of several major world religions and their foundational predecessors.</p>
+    </div>
+
+    <div class="relative max-w-xl mx-auto px-6">
+        <div class="absolute left-1/2 top-0 h-full w-0.5 bg-sage-green/30"></div>
+        
+        <div class="relative flex flex-col space-y-24">
+            
+            <div data-aos="fade-right" class="relative w-full flex justify-start">
+                <div class="w-1/2 pr-8">
+                    <div class="p-6 bg-white rounded-lg shadow-sm border border-border-color hover:shadow-xl transition-shadow text-right">
+                        <p class="font-bold text-lg text-charcoal">Prehistoric Era</p>
+                        <h3 class="text-xl font-bold text-sage-green mt-1">Nature Worship & Animism</h3>
+                        <p class="text-slate text-sm mt-2">Humanity's earliest spiritual expressions were rooted in animism—the belief that spirits inhabit natural objects and phenomena.</p>
+                    </div>
+                </div>
+                <div class="absolute left-1/2 top-4 -translate-x-1/2 w-4 h-4 bg-sage-green rounded-full border-4 border-stone"></div>
+            </div>
+
+            <div data-aos="fade-left" class="relative w-full flex justify-end">
+                <div class="w-1/2 pl-8">
+                    <div class="p-6 bg-white rounded-lg shadow-sm border border-border-color hover:shadow-xl transition-shadow text-left">
+                        <p class="font-bold text-lg text-charcoal">c. 4500–539 BCE</p>
+                        <h3 class="text-xl font-bold text-sage-green mt-1">Mesopotamian Religions</h3>
+                        <p class="text-slate text-sm mt-2">Sumerians, Akkadians, Babylonians, and Assyrians develop humanity's first organized religions, inventing writing to record myths like the Epic of Gilgamesh.</p>
+                    </div>
+                </div>
+                <div class="absolute left-1/2 top-4 -translate-x-1/2 w-4 h-4 bg-sage-green rounded-full border-4 border-stone"></div>
+            </div>
+
+            <div data-aos="fade-right" class="relative w-full flex justify-start">
+                <div class="w-1/2 pr-8">
+                    <div class="p-6 bg-white rounded-lg shadow-sm border border-border-color hover:shadow-xl transition-shadow text-right">
+                        <p class="font-bold text-lg text-charcoal">c. 3100–30 BCE</p>
+                        <h3 class="text-xl font-bold text-sage-green mt-1">Ancient Egyptian Religion</h3>
+                        <p class="text-slate text-sm mt-2">A complex pantheon and a deep focus on the afterlife emerge, codified in texts like the Book of the Dead.</p>
+                    </div>
+                </div>
+                <div class="absolute left-1/2 top-4 -translate-x-1/2 w-4 h-4 bg-sage-green rounded-full border-4 border-stone"></div>
+            </div>
+
+            <div data-aos="fade-left" class="relative w-full flex justify-end">
+                <div class="w-1/2 pl-8">
+                    <div class="p-6 bg-white rounded-lg shadow-sm border border-border-color hover:shadow-xl transition-shadow text-left">
+                        <p class="font-bold text-lg text-charcoal">c. 2300-1500 BCE</p>
+                        <h3 class="text-xl font-bold text-sage-green mt-1">Hinduism Emerges</h3>
+                        <p class="text-slate text-sm mt-2">The Vedas are composed in the Indus Valley, codifying one of the world's oldest living spiritual traditions.</p>
+                    </div>
+                </div>
+                <div class="absolute left-1/2 top-4 -translate-x-1/2 w-4 h-4 bg-sage-green rounded-full border-4 border-stone"></div>
+            </div>
+
+            <div data-aos="fade-right" class="relative w-full flex justify-start">
+                <div class="w-1/2 pr-8">
+                    <div class="p-6 bg-white rounded-lg shadow-sm border border-border-color hover:shadow-xl transition-shadow text-right">
+                        <p class="font-bold text-lg text-charcoal">c. 2000-1500 BCE</p>
+                        <h3 class="text-xl font-bold text-sage-green mt-1">Judaism's Roots</h3>
+                        <p class="text-slate text-sm mt-2">The covenant with Abraham establishes one of the first major monotheistic faiths.</p>
+                    </div>
+                </div>
+                <div class="absolute left-1/2 top-4 -translate-x-1/2 w-4 h-4 bg-sage-green rounded-full border-4 border-stone"></div>
+            </div>
+
+            <div data-aos="fade-left" class="relative w-full flex justify-end">
+                <div class="w-1/2 pl-8">
+                    <div class="p-6 bg-white rounded-lg shadow-sm border border-border-color hover:shadow-xl transition-shadow text-left">
+                        <p class="font-bold text-lg text-charcoal">c. 1500-1000 BCE</p>
+                        <h3 class="text-xl font-bold text-sage-green mt-1">Zoroastrianism is Founded</h3>
+                        <p class="text-slate text-sm mt-2">Zarathushtra's teachings in ancient Iran introduce concepts like a single creator God and cosmic dualism.</p>
+                    </div>
+                </div>
+                <div class="absolute left-1/2 top-4 -translate-x-1/2 w-4 h-4 bg-sage-green rounded-full border-4 border-stone"></div>
+            </div>
+
+            <div data-aos="fade-right" class="relative w-full flex justify-start">
+                <div class="w-1/2 pr-8">
+                    <div class="p-6 bg-white rounded-lg shadow-sm border border-border-color hover:shadow-xl transition-shadow text-right">
+                        <p class="font-bold text-lg text-charcoal">c. 9th-6th Century BCE</p>
+                        <h3 class="text-xl font-bold text-sage-green mt-1">Jainism is Formalized</h3>
+                        <p class="text-slate text-sm mt-2">Mahavira, the 24th Tirthankara, consolidates ancient teachings emphasizing non-violence (Ahimsa).</p>
+                    </div>
+                </div>
+                <div class="absolute left-1/2 top-4 -translate-x-1/2 w-4 h-4 bg-sage-green rounded-full border-4 border-stone"></div>
+            </div>
+
+            <div data-aos="fade-left" class="relative w-full flex justify-end">
+                <div class="w-1/2 pl-8">
+                    <div class="p-6 bg-white rounded-lg shadow-sm border border-border-color hover:shadow-xl transition-shadow text-left">
+                        <p class="font-bold text-lg text-charcoal">c. 6th-4th Century BCE</p>
+                        <h3 class="text-xl font-bold text-sage-green mt-1">Greek Philosophy Flourishes</h3>
+                        <p class="text-slate text-sm mt-2">Thinkers like Socrates, Plato, and Aristotle establish the foundations of Western rational inquiry and metaphysics.</p>
+                    </div>
+                </div>
+                <div class="absolute left-1/2 top-4 -translate-x-1/2 w-4 h-4 bg-sage-green rounded-full border-4 border-stone"></div>
+            </div>
+
+            <div data-aos="fade-right" class="relative w-full flex justify-start">
+                <div class="w-1/2 pr-8">
+                    <div class="p-6 bg-white rounded-lg shadow-sm border border-border-color hover:shadow-xl transition-shadow text-right">
+                        <p class="font-bold text-lg text-charcoal">c. 5th Century BCE</p>
+                        <h3 class="text-xl font-bold text-sage-green mt-1">Buddhism is Founded</h3>
+                        <p class="text-slate text-sm mt-2">Siddhartha Gautama attains enlightenment and begins teaching a path to liberation from suffering.</p>
+                    </div>
+                </div>
+                <div class="absolute left-1/2 top-4 -translate-x-1/2 w-4 h-4 bg-sage-green rounded-full border-4 border-stone"></div>
+            </div>
+
+            <div data-aos="fade-left" class="relative w-full flex justify-end">
+                <div class="w-1/2 pl-8">
+                    <div class="p-6 bg-white rounded-lg shadow-sm border border-border-color hover:shadow-xl transition-shadow text-left">
+                        <p class="font-bold text-lg text-charcoal">c. 1st Century CE</p>
+                        <h3 class="text-xl font-bold text-sage-green mt-1">Christianity Begins</h3>
+                        <p class="text-slate text-sm mt-2">Rooted in the life of Jesus of Nazareth, this faith spreads rapidly through the Roman Empire.</p>
+                    </div>
+                </div>
+                <div class="absolute left-1/2 top-4 -translate-x-1/2 w-4 h-4 bg-sage-green rounded-full border-4 border-stone"></div>
+            </div>
+
+            <div data-aos="fade-right" class="relative w-full flex justify-start">
+                <div class="w-1/2 pr-8">
+                    <div class="p-6 bg-white rounded-lg shadow-sm border border-border-color hover:shadow-xl transition-shadow text-right">
+                        <p class="font-bold text-lg text-charcoal">c. 7th Century CE</p>
+                        <h3 class="text-xl font-bold text-sage-green mt-1">Islam is Revealed</h3>
+                        <p class="text-slate text-sm mt-2">The Prophet Muhammad receives the revelations of the Qur'an in Mecca.</p>
+                    </div>
+                </div>
+                <div class="absolute left-1/2 top-4 -translate-x-1/2 w-4 h-4 bg-sage-green rounded-full border-4 border-stone"></div>
+            </div>
+
+            <div data-aos="fade-left" class="relative w-full flex justify-end">
+                <div class="w-1/2 pl-8">
+                    <div class="p-6 bg-white rounded-lg shadow-sm border border-border-color hover:shadow-xl transition-shadow text-left">
+                        <p class="font-bold text-lg text-charcoal">c. 15th Century CE</p>
+                        <h3 class="text-xl font-bold text-sage-green mt-1">Sikhism is Founded</h3>
+                        <p class="text-slate text-sm mt-2">Guru Nanak establishes a monotheistic faith in Punjab, emphasizing the oneness of God.</p>
+                    </div>
+                </div>
+                <div class="absolute left-1/2 top-4 -translate-x-1/2 w-4 h-4 bg-sage-green rounded-full border-4 border-stone"></div>
+            </div>
+
+            <div data-aos="fade-right" class="relative w-full flex justify-start">
+                <div class="w-1/2 pr-8">
+                    <div class="p-6 bg-white rounded-lg shadow-sm border border-border-color hover:shadow-xl transition-shadow text-right">
+                        <p class="font-bold text-lg text-charcoal">c. 19th-20th Century CE</p>
+                        <h3 class="text-xl font-bold text-sage-green mt-1">Modern Humanism Develops</h3>
+                        <p class="text-slate text-sm mt-2">A secular worldview emerges, emphasizing reason, ethics, and human flourishing without reliance on a divine realm.</p>
+                    </div>
+                </div>
+                <div class="absolute left-1/2 top-4 -translate-x-1/2 w-4 h-4 bg-sage-green rounded-full border-4 border-stone"></div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<section class="mb-12">
+    <div class="text-center mb-8">
+        <h2 class="text-3xl md:text-4xl font-bold text-charcoal">Prehistoric Roots: The Dawn of Belief</h2>
+        <p class="text-slate max-w-2xl mx-auto mt-2">Before recorded history, humanity's earliest spiritual expressions were deeply intertwined with the natural world.</p>
+    </div>
+
+    <div class="bg-white rounded-lg shadow-sm border border-border-color p-8">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+            <div class="text-slate text-sm leading-relaxed">
+                <h3 class="font-bold text-xl text-sage-green mb-2">Nature Worship & Animism (c. 30,000+ BCE)</h3>
+                <p>Humanity's first spiritual expressions were not codified religions but were rooted in <strong>animism</strong>—the belief that spirits inhabit natural objects, animals, and phenomena. Early humans saw the divine in the sun, the moon, the forest, and the hunt. This worldview was expressed through rituals, cave paintings, and symbolic burials, suggesting a deep-seated need to understand the forces of nature and the mystery of existence.</p>
+            </div>
+            <div class="hidden md:block">
+                <img src="cave-art.png" alt="Representation of prehistoric cave art" class="rounded-lg">
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="mb-12">
+    <div class="text-center mb-8">
+        <h2 class="text-3xl md:text-4xl font-bold text-charcoal">The Cradle of Belief: Ancient Foundations</h2>
+        <p class="text-slate max-w-2xl mx-auto mt-2">Before the major world religions took form, the civilizations of the ancient Near East were developing the very vocabulary of religious thought.</p>
+    </div>
+
+    <div class="space-y-8">
+        <div class="bg-white rounded-lg shadow-sm border border-border-color p-8">
+            <h3 class="text-3xl font-bold text-sage-green mb-6 border-b border-border-color pb-4">Mesopotamian Roots (c. 4500–539 BCE)</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 pt-4 text-slate text-sm leading-relaxed">
+                <div>
+                    <h4 class="font-bold text-lg text-charcoal mb-2">The Dawn of Religion</h4>
+                    <p>The Sumerians developed humanity's first complex urban societies and, with them, the first organized religion. They invented <strong>cuneiform</strong>, the earliest form of writing, to record myths and temple hymns. They worshipped a vast pantheon of gods and built massive temples called <strong>ziggurats</strong>. Crucially, their literature, like the <strong>Epic of Gilgamesh</strong>, contains the first known account of a Great Flood story.</p>
+                </div>
+                <div>
+                    <h4 class="font-bold text-lg text-charcoal mb-2">Empires of Faith</h4>
+                    <p>Later empires like the Babylonians and Assyrians absorbed and syncretized Sumerian beliefs. They developed state-sponsored religions linked to law, like the famous <strong>Code of Hammurabi</strong>. The historical event of the <strong>Babylonian Exile</strong> was a pivotal moment that profoundly shaped the future development of Judaism.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="bg-white rounded-lg shadow-sm border border-border-color p-8">
+            <h3 class="text-3xl font-bold text-sage-green mb-6 border-b border-border-color pb-4">Ancient Egyptian Religion (c. 3100–30 BCE)</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 pt-4 text-slate text-sm leading-relaxed">
+                <div>
+                    <h4 class="font-bold text-lg text-charcoal mb-2">Divine Kingship & Cosmic Order</h4>
+                    <p>The ancient Egyptians worshipped a complex pantheon of gods who governed creation, such as <strong>Ra</strong> (the sun god), <strong>Osiris</strong> (god of the afterlife), and <strong>Isis</strong>. The Pharaoh was considered a god-king, a divine intermediary whose duty was to maintain cosmic order and justice, a concept known as <strong>Ma'at</strong>.</p>
+                </div>
+                <div>
+                    <h4 class="font-bold text-lg text-charcoal mb-2">A Detailed Afterlife</h4>
+                    <p>A central feature of Egyptian religion was its intense focus on the afterlife. They believed the soul's journey after death culminated in the "Weighing of the Heart" ceremony. To navigate this journey, they developed complex funerary rituals and sacred texts, most famously the <strong>Book of the Dead</strong>, which contained spells to guide the deceased to a peaceful eternal existence.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <div class="text-center">
+    <h2 class="text-3xl md:text-4xl font-bold text-charcoal">The Dharmic Traditions (Indic)</h2>
+    <p class="text-slate max-w-2xl mx-auto mt-2">Rooted in the Indian subcontinent, these faiths are often characterized by concepts like Dharma, Karma, and cyclical views of time.</p>
+</div>
+
+<section class="mt-8 bg-white rounded-lg shadow-sm border border-border-color p-8">
+    
+    <h3 class="text-3xl font-bold text-sage-green mb-6 border-b border-border-color pb-4">Hinduism</h3>
+    
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-center mb-8 bg-stone p-4 rounded-lg">
+        <div>
+            <p class="text-sm font-semibold text-slate uppercase tracking-wider">Origin</p>
+            <p class="font-bold text-charcoal">c. 2300 BCE</p>
+        </div>
+        <div>
+            <p class="text-sm font-semibold text-slate uppercase tracking-wider">Founder</p>
+            <p class="font-bold text-charcoal">No Single Founder</p>
+        </div>
+        <div>
+            <p class="text-sm font-semibold text-slate uppercase tracking-wider">Key Text</p>
+            <p class="font-bold text-charcoal">The Vedas</p>
+        </div>
+        <div>
+            <p class="text-sm font-semibold text-slate uppercase tracking-wider">Core Principle</p>
+            <p class="font-bold text-charcoal">Dharma & Karma</p>
+        </div>
+    </div>
+
+    <div class="space-y-3 text-slate">
+        <details class="bg-stone/50 p-4 rounded-lg cursor-pointer group">
+            <summary class="font-semibold text-lg text-charcoal flex justify-between items-center">
+                <span>Origins & Key Concepts</span>
+                <span class="group-open:rotate-90 transition-transform duration-300 text-slate group-hover:text-sage-green">→</span>
+            </summary>
+            <div class="mt-2 text-sm leading-relaxed border-t border-border-color pt-2">
+                <p>Hinduism is one of the world's oldest living religions, with roots tracing back to the Indus Valley Civilization. It's a remarkably diverse tradition with no single founder, creed, or text. Central to its worldview are the concepts of <strong>Dharma</strong> (ethical duties), <strong>Karma</strong> (the law of cause and effect), <strong>Samsara</strong> (the cycle of birth, death, and rebirth), and <strong>Moksha</strong> (liberation from the cycle).</p>
+            </div>
+        </details>
+        <details class="bg-stone/50 p-4 rounded-lg cursor-pointer group">
+            <summary class="font-semibold text-lg text-charcoal flex justify-between items-center">
+                <span>Sacred Texts</span>
+                <span class="group-open:rotate-90 transition-transform duration-300 text-slate group-hover:text-sage-green">→</span>
+            </summary>
+            <div class="mt-2 text-sm leading-relaxed border-t border-border-color pt-2">
+                <p>The foundational scriptures are the <strong>Vedas</strong>, a collection of hymns and sacred texts composed between 1500 and 500 BCE. They were initially transmitted orally for centuries. Later texts, like the <strong>Upanishads</strong>, explored deep philosophical questions, while epic poems like the <strong>Mahabharata</strong> (which includes the Bhagavad Gita) and the <strong>Ramayana</strong> provided moral and spiritual guidance through storytelling.</p>
+            </div>
+        </details>
+    </div>
+</section>
+
+<section class="bg-white rounded-lg shadow-sm border border-border-color p-8">
+    <h3 class="text-3xl font-bold text-sage-green mb-6 border-b border-border-color pb-4">Buddhism</h3>
+    
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-center mb-8 bg-stone p-4 rounded-lg">
+        <div>
+            <p class="text-sm font-semibold text-slate uppercase tracking-wider">Origin</p>
+            <p class="font-bold text-charcoal">c. 5th Cent. BCE</p>
+        </div>
+        <div>
+            <p class="text-sm font-semibold text-slate uppercase tracking-wider">Founder</p>
+            <p class="font-bold text-charcoal">Siddhartha Gautama</p>
+        </div>
+        <div>
+            <p class="text-sm font-semibold text-slate uppercase tracking-wider">Key Text</p>
+            <p class="font-bold text-charcoal">Tripitaka</p>
+        </div>
+        <div>
+            <p class="text-sm font-semibold text-slate uppercase tracking-wider">Core Principle</p>
+            <p class="font-bold text-charcoal">Ending Suffering</p>
+        </div>
+    </div>
+
+    <div class="space-y-3 text-slate">
+        <details class="bg-stone/50 p-4 rounded-lg cursor-pointer group">
+            <summary class="font-semibold text-lg text-charcoal flex justify-between items-center">
+                <span>Origins & Founder</span>
+                <span class="group-open:rotate-90 transition-transform duration-300 text-slate group-hover:text-sage-green">→</span>
+            </summary>
+            <div class="mt-2 text-sm leading-relaxed border-t border-border-color pt-2">
+                <p>Buddhism originated with Siddhartha Gautama, a prince from the Shakya clan in ancient India. Troubled by the existence of suffering, he renounced his royal life to seek enlightenment. After years of asceticism and meditation, he achieved enlightenment (Bodhi) under the Bodhi tree and became the Buddha, or "the awakened one." His teachings, known as the Dharma, provide a path to liberation from suffering and the cycle of rebirth.</p>
+            </div>
+        </details>
+        <details class="bg-stone/50 p-4 rounded-lg cursor-pointer group">
+            <summary class="font-semibold text-lg text-charcoal flex justify-between items-center">
+                <span>Sacred Texts</span>
+                <span class="group-open:rotate-90 transition-transform duration-300 text-slate group-hover:text-sage-green">→</span>
+            </summary>
+            <div class="mt-2 text-sm leading-relaxed border-t border-border-color pt-2">
+                <p>The earliest collection of Buddhist scriptures is the <strong>Tripitaka</strong> (Pali Canon), or "Three Baskets." It consists of the Sutta Pitaka (discourses of the Buddha), the Vinaya Pitaka (rules for monastic life), and the Abhidhamma Pitaka (philosophical and psychological analyses). Like the Vedas, these were initially preserved through a strong oral tradition before being written down.</p>
+            </div>
+        </details>
+        <details class="bg-stone/50 p-4 rounded-lg cursor-pointer group">
+            <summary class="font-semibold text-lg text-charcoal flex justify-between items-center">
+                <span>Major Divisions</span>
+                <span class="group-open:rotate-90 transition-transform duration-300 text-slate group-hover:text-sage-green">→</span>
+            </summary>
+            <div class="mt-2 text-sm leading-relaxed border-t border-border-color pt-2">
+                <p>The two primary branches of Buddhism are <strong>Theravada</strong> ("The School of the Elders"), which is the oldest surviving school and emphasizes the individual's path to enlightenment (Arhat), and <strong>Mahayana</strong> ("The Great Vehicle"), which introduced the ideal of the Bodhisattva—an enlightened being who delays their own nirvana to help all sentient beings. Mahayana further diversified into numerous schools, including Zen and Tibetan Buddhism.</p>
+            </div>
+        </details>
+    </div>
+</section>
+
+<section class="bg-white rounded-lg shadow-sm border border-border-color p-8">
+    <h3 class="text-3xl font-bold text-sage-green mb-6 border-b border-border-color pb-4">Jainism</h3>
+    
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-center mb-8 bg-stone p-4 rounded-lg">
+        <div>
+            <p class="text-sm font-semibold text-slate uppercase tracking-wider">Origin</p>
+            <p class="font-bold text-charcoal">c. 9th-6th Cent. BCE</p>
+        </div>
+        <div>
+            <p class="text-sm font-semibold text-slate uppercase tracking-wider">Founder</p>
+            <p class="font-bold text-charcoal">Mahavira (24th Tirthankara)</p>
+        </div>
+        <div>
+            <p class="text-sm font-semibold text-slate uppercase tracking-wider">Key Text</p>
+            <p class="font-bold text-charcoal">The Agamas</p>
+        </div>
+        <div>
+            <p class="text-sm font-semibold text-slate uppercase tracking-wider">Core Principle</p>
+            <p class="font-bold text-charcoal">Ahimsa (Non-violence)</p>
+        </div>
+    </div>
+
+    <div class="space-y-3 text-slate">
+        <details class="bg-stone/50 p-4 rounded-lg cursor-pointer group">
+            <summary class="font-semibold text-lg text-charcoal flex justify-between items-center">
+                <span>Origins & Founder</span>
+                <span class="group-open:rotate-90 transition-transform duration-300 text-slate group-hover:text-sage-green">→</span>
+            </summary>
+            <div class="mt-2 text-sm leading-relaxed border-t border-border-color pt-2">
+                <p>Jainism is an ancient Indian religion with a philosophy rooted in eternal, universal truths. Jains believe these truths are revealed in each era by a succession of 24 Tirthankaras (ford-makers). The last of these, <strong>Mahavira</strong>, lived in the 6th century BCE and is considered the figure who consolidated and propagated the core tenets of modern Jainism. The central goal is to achieve liberation of the soul (jiva) from the cycle of rebirth (samsara) by shedding accumulated karma.</p>
+            </div>
+        </details>
+        <details class="bg-stone/50 p-4 rounded-lg cursor-pointer group">
+            <summary class="font-semibold text-lg text-charcoal flex justify-between items-center">
+                <span>Sacred Texts</span>
+                <span class="group-open:rotate-90 transition-transform duration-300 text-slate group-hover:text-sage-green">→</span>
+            </summary>
+            <div class="mt-2 text-sm leading-relaxed border-t border-border-color pt-2">
+                <p>The sacred scriptures of Jainism are collectively known as the <strong>Agamas</strong>. These texts are based on the discourses of Mahavira, which were compiled by his disciples. The Agamas contain a vast body of knowledge on Jain metaphysics, ethics, cosmology, and the path to liberation.</p>
+            </div>
+        </details>
+        <details class="bg-stone/50 p-4 rounded-lg cursor-pointer group">
+            <summary class="font-semibold text-lg text-charcoal flex justify-between items-center">
+                <span>Major Divisions</span>
+                <span class="group-open:rotate-90 transition-transform duration-300 text-slate group-hover:text-sage-green">→</span>
+            </summary>
+            <div class="mt-2 text-sm leading-relaxed border-t border-border-color pt-2">
+                <p>The two main sects in Jainism are the <strong>Digambara</strong> ("sky-clad") and the <strong>Shvetambara</strong> ("white-clad"). The split occurred primarily over differences in monastic discipline, particularly regarding the practice of nudity for monks as a symbol of complete non-attachment. Digambara monks renounce all possessions, including clothing, while Shvetambara monks wear simple white garments.</p>
+            </div>
+        </details>
+    </div>
+</section>
+
+<section class="bg-white rounded-lg shadow-sm border border-border-color p-8">
+    <h3 class="text-3xl font-bold text-sage-green mb-6 border-b border-border-color pb-4">Sikhism</h3>
+    
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-center mb-8 bg-stone p-4 rounded-lg">
+        <div>
+            <p class="text-sm font-semibold text-slate uppercase tracking-wider">Origin</p>
+            <p class="font-bold text-charcoal">c. 15th Cent. CE</p>
+        </div>
+        <div>
+            <p class="text-sm font-semibold text-slate uppercase tracking-wider">Founder</p>
+            <p class="font-bold text-charcoal">Guru Nanak</p>
+        </div>
+        <div>
+            <p class="text-sm font-semibold text-slate uppercase tracking-wider">Key Text</p>
+            <p class="font-bold text-charcoal">Guru Granth Sahib</p>
+        </div>
+        <div>
+            <p class="text-sm font-semibold text-slate uppercase tracking-wider">Core Principle</p>
+            <p class="font-bold text-charcoal">One God (Ik Onkar)</p>
+        </div>
+    </div>
+
+    <div class="space-y-3 text-slate">
+        <details class="bg-stone/50 p-4 rounded-lg cursor-pointer group">
+            <summary class="font-semibold text-lg text-charcoal flex justify-between items-center">
+                <span>Origins & Founder</span>
+                <span class="group-open:rotate-90 transition-transform duration-300 text-slate group-hover:text-sage-green">→</span>
+            </summary>
+            <div class="mt-2 text-sm leading-relaxed border-t border-border-color pt-2">
+                <p>Sikhism was founded in the Punjab region of India by Guru Nanak in the 15th century. It emerged in a context of conflict between Hindu and Muslim traditions, and its teachings are seen by many as a bridge between them, emphasizing the oneness of God (Ik Onkar) beyond religious divisions. Guru Nanak was the first of ten successive Gurus who developed and codified the faith.</p>
+            </div>
+        </details>
+        <details class="bg-stone/50 p-4 rounded-lg cursor-pointer group">
+            <summary class="font-semibold text-lg text-charcoal flex justify-between items-center">
+                <span>Sacred Texts</span>
+                <span class="group-open:rotate-90 transition-transform duration-300 text-slate group-hover:text-sage-green">→</span>
+            </summary>
+            <div class="mt-2 text-sm leading-relaxed border-t border-border-color pt-2">
+                <p>The sacred scripture of Sikhism is the <strong>Guru Granth Sahib</strong>, which is unique in that it is considered the final, living Guru. It was compiled by the Sikh Gurus and consists of their teachings and the writings of various Hindu and Muslim saints whose thoughts were consistent with Sikh principles. The text is the ultimate spiritual authority for all Sikhs.</p>
+            </div>
+        </details>
+        <details class="bg-stone/50 p-4 rounded-lg cursor-pointer group">
+            <summary class="font-semibold text-lg text-charcoal flex justify-between items-center">
+                <span>Major Reforms</span>
+                <span class="group-open:rotate-90 transition-transform duration-300 text-slate group-hover:text-sage-green">→</span>
+            </summary>
+            <div class="mt-2 text-sm leading-relaxed border-t border-border-color pt-2">
+                <p>A major period of reform was the <strong>Singh Sabha Movement</strong> in the late 19th century. It arose to revive Sikhism's distinct identity, which was being absorbed into other traditions. The movement emphasized returning to the teachings of the Gurus, promoting education, and codifying Sikh practices, which helped establish a clear and separate Sikh identity in the modern era.</p>
+            </div>
+        </details>
+    </div>
+</section>
+
+<div class="text-center mt-16">
+    <h2 class="text-3xl md:text-4xl font-bold text-charcoal">Ancient & Monotheistic Roots</h2>
+    <p class="text-slate max-w-2xl mx-auto mt-2">Explore ancient faiths that introduced foundational concepts into the world's great religions.</p>
+</div>
+
+<section class="mt-8 bg-white rounded-lg shadow-sm border border-border-color p-8">
+    <h3 class="text-3xl font-bold text-sage-green mb-6 border-b border-border-color pb-4">Zoroastrianism</h3>
+    
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-center mb-8 bg-stone p-4 rounded-lg">
+        <div>
+            <p class="text-sm font-semibold text-slate uppercase tracking-wider">Origin</p>
+            <p class="font-bold text-charcoal">c. 1500-1000 BCE</p>
+        </div>
+        <div>
+            <p class="text-sm font-semibold text-slate uppercase tracking-wider">Founder</p>
+            <p class="font-bold text-charcoal">Zarathushtra (Zoroaster)</p>
+        </div>
+        <div>
+            <p class="text-sm font-semibold text-slate uppercase tracking-wider">Key Text</p>
+            <p class="font-bold text-charcoal">The Avesta</p>
+        </div>
+        <div>
+            <p class="text-sm font-semibold text-slate uppercase tracking-wider">Core Principle</p>
+            <p class="font-bold text-charcoal">Cosmic Dualism</p>
+        </div>
+    </div>
+
+    <div class="space-y-3 text-slate">
+        <details class="bg-stone/50 p-4 rounded-lg cursor-pointer group">
+            <summary class="font-semibold text-lg text-charcoal flex justify-between items-center">
+                <span>Origins & Beliefs</span>
+                <span class="group-open:rotate-90 transition-transform duration-300 text-slate group-hover:text-sage-green">→</span>
+            </summary>
+            <div class="mt-2 text-sm leading-relaxed border-t border-border-color pt-2">
+                <p>One of the world's oldest continuously practiced religions, Zoroastrianism originated in ancient Iran. Its core is a dualistic cosmology pitting the one, transcendent God, <strong>Ahura Mazda</strong> (Wise Lord), against the destructive spirit, <strong>Angra Mainyu</strong>. Humans are central to this cosmic struggle, able to choose good over evil through "Good Thoughts, Good Words, Good Deeds."</p>
+            </div>
+        </details>
+        <details class="bg-stone/50 p-4 rounded-lg cursor-pointer group">
+            <summary class="font-semibold text-lg text-charcoal flex justify-between items-center">
+                <span>Influence on Other Faiths</span>
+                <span class="group-open:rotate-90 transition-transform duration-300 text-slate group-hover:text-sage-green">→</span>
+            </summary>
+            <div class="mt-2 text-sm leading-relaxed border-t border-border-color pt-2">
+                <p>Zoroastrianism had a profound influence on the Abrahamic faiths. Many scholars believe it introduced foundational concepts such as a single creator God, a final judgment, the ideas of heaven and hell, and the figure of a divine adversary (a devil or satan figure), which were later integrated into Judaism, Christianity, and Islam.</p>
+            </div>
+        </details>
+    </div>
+</section>
+
+<div class="text-center mt-16">
+    <h2 class="text-3xl md:text-4xl font-bold text-charcoal">The Abrahamic Traditions (Middle Eastern)</h2>
+    <p class="text-slate max-w-2xl mx-auto mt-2">Originating in the Middle East, these monotheistic faiths share a common patriarch in Abraham and are often characterized by a linear view of time and history.</p>
+</div>
+
+<section class="mt-8 bg-white rounded-lg shadow-sm border border-border-color p-8">
+    <h3 class="text-3xl font-bold text-sage-green mb-6 border-b border-border-color pb-4">Judaism</h3>
+    
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-center mb-8 bg-stone p-4 rounded-lg">
+        <div>
+            <p class="text-sm font-semibold text-slate uppercase tracking-wider">Origin</p>
+            <p class="font-bold text-charcoal">c. 2000 BCE</p>
+        </div>
+        <div>
+            <p class="text-sm font-semibold text-slate uppercase tracking-wider">Founder</p>
+            <p class="font-bold text-charcoal">Abraham</p>
+        </div>
+        <div>
+            <p class="text-sm font-semibold text-slate uppercase tracking-wider">Key Text</p>
+            <p class="font-bold text-charcoal">The Torah</p>
+        </div>
+        <div>
+            <p class="text-sm font-semibold text-slate uppercase tracking-wider">Core Principle</p>
+            <p class="font-bold text-charcoal">Covenant with God</p>
+        </div>
+    </div>
+
+    <div class="space-y-3 text-slate">
+        <details class="bg-stone/50 p-4 rounded-lg cursor-pointer group">
+            <summary class="font-semibold text-lg text-charcoal flex justify-between items-center">
+                <span>Origins & Founder</span>
+                <span class="group-open:rotate-90 transition-transform duration-300 text-slate group-hover:text-sage-green">→</span>
+            </summary>
+            <div class="mt-2 text-sm leading-relaxed border-t border-border-color pt-2">
+                <p>Judaism traces its origins to the covenant made between God and Abraham, making it one of the oldest monotheistic religions. According to scripture, God promised Abraham that he would be the father of a great nation if he and his descendants remained faithful. This covenantal relationship is the cornerstone of Jewish identity and theology.</p>
+            </div>
+        </details>
+        <details class="bg-stone/50 p-4 rounded-lg cursor-pointer group">
+            <summary class="font-semibold text-lg text-charcoal flex justify-between items-center">
+                <span>Sacred Texts</span>
+                <span class="group-open:rotate-90 transition-transform duration-300 text-slate group-hover:text-sage-green">→</span>
+            </summary>
+            <div class="mt-2 text-sm leading-relaxed border-t border-border-color pt-2">
+                <p>The central and most important text is the <strong>Torah</strong>, comprising the five books of Moses. It is part of the larger Tanakh, or Hebrew Bible. Alongside the written law, the <strong>Oral Torah</strong>, which interprets and elaborates on the written text, was eventually codified in the <strong>Talmud</strong>. Together, these texts form the foundation of Jewish law and ethics.</p>
+            </div>
+        </details>
+        <details class="bg-stone/50 p-4 rounded-lg cursor-pointer group">
+            <summary class="font-semibold text-lg text-charcoal flex justify-between items-center">
+                <span>Major Divisions</span>
+                <span class="group-open:rotate-90 transition-transform duration-300 text-slate group-hover:text-sage-green">→</span>
+            </summary>
+            <div class="mt-2 text-sm leading-relaxed border-t border-border-color pt-2">
+                <p>Modern Judaism is primarily composed of three main movements that emerged in response to the Enlightenment. <strong>Orthodox Judaism</strong> adheres to a strict interpretation and application of Jewish law. <strong>Conservative Judaism</strong> seeks a middle ground, accepting the binding nature of the law while allowing for modern interpretations. <strong>Reform Judaism</strong> emphasizes the ethical traditions over strict observance, adapting its practices to contemporary life.</p>
+            </div>
+        </details>
+    </div>
+</section>
+
+<section class="bg-white rounded-lg shadow-sm border border-border-color p-8">
+    <h3 class="text-3xl font-bold text-sage-green mb-6 border-b border-border-color pb-4">Christianity</h3>
+    
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-center mb-8 bg-stone p-4 rounded-lg">
+        <div>
+            <p class="text-sm font-semibold text-slate uppercase tracking-wider">Origin</p>
+            <p class="font-bold text-charcoal">c. 1st Cent. CE</p>
+        </div>
+        <div>
+            <p class="text-sm font-semibold text-slate uppercase tracking-wider">Founder</p>
+            <p class="font-bold text-charcoal">Jesus Christ</p>
+        </div>
+        <div>
+            <p class="text-sm font-semibold text-slate uppercase tracking-wider">Key Text</p>
+            <p class="font-bold text-charcoal">The Bible</p>
+        </div>
+        <div>
+            <p class="text-sm font-semibold text-slate uppercase tracking-wider">Core Principle</p>
+            <p class="font-bold text-charcoal">Jesus as Savior</p>
+        </div>
+    </div>
+
+    <div class="space-y-3 text-slate">
+        <details class="bg-stone/50 p-4 rounded-lg cursor-pointer group">
+            <summary class="font-semibold text-lg text-charcoal flex justify-between items-center">
+                <span>Origins & Founder</span>
+                <span class="group-open:rotate-90 transition-transform duration-300 text-slate group-hover:text-sage-green">→</span>
+            </summary>
+            <div class="mt-2 text-sm leading-relaxed border-t border-border-color pt-2">
+                <p>Christianity emerged from Second Temple Judaism in the Roman province of Judea, based on the life, teachings, death, and resurrection of Jesus of Nazareth. Christians believe Jesus is the Son of God and the Messiah (Christ) prophesied in the Hebrew Bible. His teachings, centered on love, forgiveness, and salvation, became the foundation of the new faith.</p>
+            </div>
+        </details>
+        <details class="bg-stone/50 p-4 rounded-lg cursor-pointer group">
+            <summary class="font-semibold text-lg text-charcoal flex justify-between items-center">
+                <span>Sacred Texts</span>
+                <span class="group-open:rotate-90 transition-transform duration-300 text-slate group-hover:text-sage-green">→</span>
+            </summary>
+            <div class="mt-2 text-sm leading-relaxed border-t border-border-color pt-2">
+                <p>The Christian sacred scripture is the <strong>Bible</strong>, which consists of two parts. The <strong>Old Testament</strong> is largely comprised of the Hebrew Bible (Tanakh). The <strong>New Testament</strong> contains accounts of Jesus's life and ministry (the four Gospels), the history of the early Church (Acts of the Apostles), letters (Epistles) written by early Christian leaders like the Apostle Paul, and the Book of Revelation.</p>
+            </div>
+        </details>
+        <details class="bg-stone/50 p-4 rounded-lg cursor-pointer group">
+            <summary class="font-semibold text-lg text-charcoal flex justify-between items-center">
+                <span>Major Divisions</span>
+                <span class="group-open:rotate-90 transition-transform duration-300 text-slate group-hover:text-sage-green">→</span>
+            </summary>
+            <div class="mt-2 text-sm leading-relaxed border-t border-border-color pt-2">
+                <p>The first major split was the <strong>Great Schism of 1054</strong>, which divided Christianity into the <strong>Roman Catholic Church</strong> in the West and the <strong>Eastern Orthodox Church</strong> in the East. A second major division occurred during the <strong>Protestant Reformation</strong> in the 16th century, led by figures like Martin Luther and John Calvin, which gave rise to thousands of Protestant denominations worldwide.</p>
+            </div>
+        </details>
+    </div>
+</section>
+
+<section class="bg-white rounded-lg shadow-sm border border-border-color p-8">
+    <h3 class="text-3xl font-bold text-sage-green mb-6 border-b border-border-color pb-4">Islam</h3>
+    
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-center mb-8 bg-stone p-4 rounded-lg">
+        <div>
+            <p class="text-sm font-semibold text-slate uppercase tracking-wider">Origin</p>
+            <p class="font-bold text-charcoal">c. 7th Cent. CE</p>
+        </div>
+        <div>
+            <p class="text-sm font-semibold text-slate uppercase tracking-wider">Founder</p>
+            <p class="font-bold text-charcoal">Prophet Muhammad</p>
+        </div>
+        <div>
+            <p class="text-sm font-semibold text-slate uppercase tracking-wider">Key Text</p>
+            <p class="font-bold text-charcoal">The Qur'an</p>
+        </div>
+        <div>
+            <p class="text-sm font-semibold text-slate uppercase tracking-wider">Core Principle</p>
+            <p class="font-bold text-charcoal">Submission to God</p>
+        </div>
+    </div>
+
+    <div class="space-y-3 text-slate">
+        <details class="bg-stone/50 p-4 rounded-lg cursor-pointer group">
+            <summary class="font-semibold text-lg text-charcoal flex justify-between items-center">
+                <span>Origins & Founder</span>
+                <span class="group-open:rotate-90 transition-transform duration-300 text-slate group-hover:text-sage-green">→</span>
+            </summary>
+            <div class="mt-2 text-sm leading-relaxed border-t border-border-color pt-2">
+                <p>Islam began in the 7th century CE in the city of Mecca in the Arabian Peninsula. It is based on the revelations received by the Prophet Muhammad, who Muslims believe to be the final prophet in a line of prophets including Abraham, Moses, and Jesus. The core of his message was a return to pure monotheism—the worship of the one, indivisible God (Allah).</p>
+            </div>
+        </details>
+        <details class="bg-stone/50 p-4 rounded-lg cursor-pointer group">
+            <summary class="font-semibold text-lg text-charcoal flex justify-between items-center">
+                <span>Sacred Texts</span>
+                <span class="group-open:rotate-90 transition-transform duration-300 text-slate group-hover:text-sage-green">→</span>
+            </summary>
+            <div class="mt-2 text-sm leading-relaxed border-t border-border-color pt-2">
+                <p>The sacred scripture of Islam is the <strong>Qur'an</strong>, which Muslims believe to be the literal word of God as revealed to Prophet Muhammad over 23 years. Unlike other scriptures, it is considered a direct, unaltered revelation. Alongside the Qur'an, the <strong>Hadith</strong>—collections of the Prophet's sayings and actions—provide a crucial source of guidance for Islamic law and daily life.</p>
+            </div>
+        </details>
+        <details class="bg-stone/50 p-4 rounded-lg cursor-pointer group">
+            <summary class="font-semibold text-lg text-charcoal flex justify-between items-center">
+                <span>Major Divisions</span>
+                <span class="group-open:rotate-90 transition-transform duration-300 text-slate group-hover:text-sage-green">→</span>
+            </summary>
+            <div class="mt-2 text-sm leading-relaxed border-t border-border-color pt-2">
+                <p>The most significant division in Islam occurred shortly after the Prophet's death, centered on the question of his rightful successor. This led to the split between <strong>Sunni</strong> and <strong>Shia</strong> Islam. Sunnis, who form the majority of Muslims, believed the leader should be elected from among the Prophet's companions. The Shia believed leadership should remain within the Prophet's family, starting with his cousin and son-in-law, Ali. This initial political disagreement evolved over centuries into distinct theological and legal traditions.</p>
+            </div>
+        </details>
+    </div>
+</section>
+
+<div class="text-center mt-16">
+    <h2 class="text-3xl md:text-4xl font-bold text-charcoal">The Rationalist & Humanist Traditions</h2>
+    <p class="text-slate max-w-2xl mx-auto mt-2">These traditions place human reason, experience, and flourishing at the center of their worldview, offering paths to meaning outside of divine revelation.</p>
+</div>
+<section class="mt-8 bg-white rounded-lg shadow-sm border border-border-color p-8">
+    <h3 class="text-3xl font-bold text-sage-green mb-6 border-b border-border-color pb-4">Greek Philosophy</h3>
+    
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-center mb-8 bg-stone p-4 rounded-lg">
+        <div>
+            <p class="text-sm font-semibold text-slate uppercase tracking-wider">Origin</p>
+            <p class="font-bold text-charcoal">c. 6th Cent. BCE</p>
+        </div>
+        <div>
+            <p class="text-sm font-semibold text-slate uppercase tracking-wider">Key Figures</p>
+            <p class="font-bold text-charcoal">Socrates, Plato, Aristotle</p>
+        </div>
+        <div>
+            <p class="text-sm font-semibold text-slate uppercase tracking-wider">Key Texts</p>
+            <p class="font-bold text-charcoal">Dialogues & Treatises</p>
+        </div>
+        <div>
+            <p class="text-sm font-semibold text-slate uppercase tracking-wider">Core Principle</p>
+            <p class="font-bold text-charcoal">Rational Inquiry</p>
+        </div>
+    </div>
+
+    <div class="space-y-3 text-slate">
+        <details class="bg-stone/50 p-4 rounded-lg cursor-pointer group">
+            <summary class="font-semibold text-lg text-charcoal flex justify-between items-center">
+                <span>The Birth of Reason</span>
+                <span class="group-open:rotate-90 transition-transform duration-300 text-slate group-hover:text-sage-green">→</span>
+            </summary>
+            <div class="mt-2 text-sm leading-relaxed border-t border-border-color pt-2">
+                <p>Greek philosophy marked a monumental shift in human thought, moving from mythological explanations (<em>mythos</em>) to a reliance on logical reasoning (<em>logos</em>) to understand the cosmos. Early "Pre-Socratic" thinkers like Thales and Heraclitus sought to find the single, underlying substance of the universe, laying the groundwork for Western science and metaphysics.</p>
+            </div>
+        </details>
+        <details class="bg-stone/50 p-4 rounded-lg cursor-pointer group">
+            <summary class="font-semibold text-lg text-charcoal flex justify-between items-center">
+                <span>The Socratic Revolution</span>
+                <span class="group-open:rotate-90 transition-transform duration-300 text-slate group-hover:text-sage-green">→</span>
+            </summary>
+            <div class="mt-2 text-sm leading-relaxed border-t border-border-color pt-2">
+                <p><strong>Socrates</strong> turned philosophy inward, focusing on ethics and self-examination with his famous Socratic method. His student, <strong>Plato</strong>, developed the "Theory of Forms," arguing that the physical world is a mere shadow of a higher, eternal reality. <strong>Aristotle</strong>, Plato's student, grounded philosophy back in the empirical world, creating systematic works on logic, biology, ethics, and politics that would shape Western thought for two millennia.</p>
+            </div>
+        </details>
+    </div>
+</section>
+
+<section class="mt-8 bg-white rounded-lg shadow-sm border border-border-color p-8">
+    <h3 class="text-3xl font-bold text-sage-green mb-6 border-b border-border-color pb-4">Modern Humanism</h3>
+    
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-center mb-8 bg-stone p-4 rounded-lg">
+        <div>
+            <p class="text-sm font-semibold text-slate uppercase tracking-wider">Origin</p>
+            <p class="font-bold text-charcoal">c. 19th-20th Cent. CE</p>
+        </div>
+        <div>
+            <p class="text-sm font-semibold text-slate uppercase tracking-wider">Key Figures</p>
+            <p class="font-bold text-charcoal">John Dewey, Bertrand Russell</p>
+        </div>
+        <div>
+            <p class="text-sm font-semibold text-slate uppercase tracking-wider">Key Texts</p>
+            <p class="font-bold text-charcoal">Humanist Manifestos</p>
+        </div>
+        <div>
+            <p class="text-sm font-semibold text-slate uppercase tracking-wider">Core Principle</p>
+            <p class="font-bold text-charcoal">Reason & Human Flourishing</p>
+        </div>
+    </div>
+
+    <div class="space-y-3 text-slate">
+        <details class="bg-stone/50 p-4 rounded-lg cursor-pointer group">
+            <summary class="font-semibold text-lg text-charcoal flex justify-between items-center">
+                <span>Origins & Core Tenets</span>
+                <span class="group-open:rotate-90 transition-transform duration-300 text-slate group-hover:text-sage-green">→</span>
+            </summary>
+            <div class="mt-2 text-sm leading-relaxed border-t border-border-color pt-2">
+                <p>Modern or Secular Humanism is a progressive philosophy of life that, without theism and other supernatural beliefs, affirms our ability and responsibility to lead ethical lives of personal fulfillment that aspire to the greater good. Its roots are in the Enlightenment's emphasis on reason, but it was formally organized in the 20th century. It is a worldview centered on human reason, compassion, and shared experience.</p>
+            </div>
+        </details>
+        <details class="bg-stone/50 p-4 rounded-lg cursor-pointer group">
+            <summary class="font-semibold text-lg text-charcoal flex justify-between items-center">
+                <span>A Basis for Morality</span>
+                <span class="group-open:rotate-90 transition-transform duration-300 text-slate group-hover:text-sage-green">→</span>
+            </summary>
+            <div class="mt-2 text-sm leading-relaxed border-t border-border-color pt-2">
+                <p>Humanism argues that morality is not derived from divine commands but from a human-centered understanding of ethics. It grounds morality in shared human needs, empathy, and the pursuit of well-being for all conscious creatures. It holds that ethical principles should be evaluated by their consequences in the real world, not by their adherence to ancient dogma.</p>
+            </div>
+        </details>
+    </div>
+</section>
+
+<section class="mt-12 bg-white rounded-lg shadow-sm border border-border-color p-8">
+    <h2 class="text-3xl font-bold text-center text-charcoal mb-8">How Faiths Spread: A Global Journey</h2>
+    <div class="space-y-6">
+        <div class="bg-stone p-6 rounded-lg border border-border-color">
+            <h3 class="font-bold text-xl text-sage-green mb-2">Royal Patronage & Imperial Power</h3>
+            <p class="text-slate text-sm">The adoption of a new faith by a powerful ruler was one of the most effective ways to ensure its spread. Imperial endorsement provided the resources, legitimacy, and infrastructure for a religion to expand across vast territories.</p>
+            <p class="text-xs text-charcoal font-semibold mt-3"><strong>Key Examples:</strong> Emperor Ashoka's patronage of Buddhism in ancient India and Emperor Constantine's conversion, which paved the way for Christianity's dominance in the Roman Empire.</p>
+        </div>
+        <div class="bg-stone p-6 rounded-lg border border-border-color">
+            <h3 class="font-bold text-xl text-sage-green mb-2">Trade Routes & Cultural Exchange</h3>
+            <p class="text-slate text-sm">Merchants, missionaries, and travelers carried ideas along with their goods. The Silk Road and maritime trade routes were vital arteries for the transmission of faiths like Buddhism and Islam, allowing them to cross deserts, mountains, and oceans.</p>
+        </div>
+        <div class="bg-stone p-6 rounded-lg border border-border-color">
+            <h3 class="font-bold text-xl text-sage-green mb-2">Diaspora & Migration</h3>
+            <p class="text-slate text-sm">Sometimes, faiths spread not through conversion but through the movement of peoples. The global diaspora of the Jewish people and the more recent migration of Hindus and Sikhs for labor and professional opportunities have established these traditions in nearly every corner of the world.</p>
+        </div>
+    </div>
+</section>
+
+<section class="mt-12 grid grid-cols-1 lg:grid-cols-2 gap-12">
+    <div class="bg-white rounded-lg shadow-sm border border-border-color p-8">
+        <h2 class="text-2xl font-bold text-center text-charcoal mb-2">Global Religious Landscape Today</h2>
+        <p class="text-center text-slate text-sm mb-6">This chart illustrates the proportional representation of major faiths, providing a snapshot of our planet's diverse spiritual composition.</p>
+        <div class="chart-container h-80 md:h-96">
+            <canvas id="globalReligionDonut"></canvas>
+        </div>
+    </div>
+
+    <div class="bg-white rounded-lg shadow-sm border border-border-color p-8">
+        <h2 class="text-2xl font-bold text-center text-charcoal mb-2">Growth of Adherents Over Millennia</h2>
+        <p class="text-center text-slate text-sm mb-6">This chart tracks the estimated growth in followers for the world's largest faiths, illustrating periods of rapid expansion and their trajectories to the present day.</p>
+        <div class="chart-container h-80 md:h-96">
+            <canvas id="adherentGrowthChart"></canvas>
+        </div>
+    </div>
+</section>
+
+<section class="mt-12 bg-white rounded-lg shadow-sm border border-border-color p-8">
+    <h2 class="text-2xl font-bold text-center text-charcoal mb-2">Geographic Distribution of Faiths</h2>
+    <p class="text-center text-slate text-sm mb-6">While many religions have global reach, their followers are often concentrated in specific regions. This chart breaks down the continental distribution for each major religion, revealing their geographic heartlands.</p>
+    <div class="chart-container h-96 md:h-[450px]">
+        <canvas id="geographicDistributionChart"></canvas>
+    </div>
+</section>
+
+<section class="mt-12 bg-white rounded-lg shadow-sm border border-border-color p-8">
+    <h2 class="text-2xl font-bold text-center text-charcoal mb-2">The Future of Faith: Projected Growth</h2>
+    <p class="text-center text-slate text-sm mb-6 max-w-2xl mx-auto">While live data isn't possible, demographic projections from the Pew Research Center show how the global religious landscape is expected to shift by 2050, primarily driven by differences in fertility rates and the size of youth populations.</p>
+    <div class="chart-container h-96 md:h-[450px]">
+        <canvas id="fastestGrowingChart"></canvas>
+    </div>
+</section>
+
+<section class="text-center mt-16 py-6 border-t border-border-color">
+    <h2 class="text-3xl font-bold text-charcoal">The Converging World</h2>
+    <p class="text-slate max-w-3xl mx-auto mt-4 leading-relaxed">
+        No culture is a monolith. As the world becomes more interconnected, we see a fascinating trend: many collectivistic societies are adopting more individualistic traits, while many in individualistic cultures are seeking a greater sense of community. Understanding both frameworks is essential for navigating our shared global future.
+    </p>
+</section>
+
+<section class="mt-12 text-center">
+    <a href="index.html#infographics" class="inline-block font-bold text-white bg-sage-green rounded-md py-3 px-8 transition-all duration-300 hover:bg-charcoal hover:shadow-lg hover:-translate-y-1">
+        Back to All Infographics
+    </a>
+</section>
+
+</div>
+</main>
+
+<footer class="mt-16 border-t border-border-color bg-white">
+    <div class="container mx-auto px-6 py-8 text-center text-slate text-sm">
+        <p>&copy; 2025 The Philosophical Compass. All Rights Reserved.</p>
+    </div>
+</footer>
+
+<script>
+    // Mobile menu toggle
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    if (menuBtn) {
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    }
+
+    // Chart.js Configurations
+    document.addEventListener('DOMContentLoaded', function () {
+        const FONT_DEFAULTS = { family: 'Inter', size: 12 };
+        const CHARCOAL = '#1E293B';
+        const SLATE = '#64748B';
+        const SAGE_GREEN = '#65816D';
+        const SAND = '#F4E9CD';
+        const BORDER_COLOR = '#E2E8F0';
+
+        Chart.defaults.font.family = 'Inter';
+        Chart.defaults.color = CHARCOAL;
+        Chart.defaults.plugins.legend.position = 'bottom';
+        Chart.defaults.plugins.legend.labels.usePointStyle = true;
+        Chart.defaults.plugins.legend.labels.boxWidth = 8;
+        Chart.defaults.plugins.legend.labels.padding = 20;
+
+        // 1. Global Religion Donut Chart
+        const globalDonutCtx = document.getElementById('globalReligionDonut');
+        if (globalDonutCtx) {
+            new Chart(globalDonutCtx, {
+                type: 'doughnut',
+                data: {
+                    labels: [
+                        'Christianity', 'Islam', 'Hinduism',
+                        'Buddhism', 'Unaffiliated', 'Folk Religions', 'Other'
+                    ],
+                    datasets: [{
+                        data: [31.1, 24.9, 15.2, 6.6, 15.6, 5.6, 1.0],
+                        backgroundColor: [
+                            SAGE_GREEN, SLATE, '#a0aec0', '#cbd5e0', SAND, '#e2e8f0', '#f8fafc'
+                        ],
+                        borderColor: '#FFFFFF',
+                        borderWidth: 2,
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    cutout: '60%',
+                    plugins: {
+                        legend: {
+                            position: 'right',
+                            labels: { font: FONT_DEFAULTS, color: CHARCOAL }
+                        }
+                    }
+                }
+            });
+        }
+
+        // 2. Adherent Growth Line Chart
+        const adherentGrowthCtx = document.getElementById('adherentGrowthChart');
+        if (adherentGrowthCtx) {
+            new Chart(adherentGrowthCtx, {
+                type: 'line',
+                data: {
+                    labels: ['1 CE', '1000 CE', '1500 CE', '1900 CE', '2020 CE'],
+                    datasets: [
+                        {
+                            label: 'Christianity',
+                            data: [0.3, 220, 410, 560, 2400],
+                            borderColor: SAGE_GREEN,
+                            backgroundColor: 'rgba(101, 129, 109, 0.1)',
+                            fill: true,
+                            tension: 0.3
+                        },
+                        {
+                            label: 'Islam',
+                            data: [0, 30, 90, 230, 1900],
+                            borderColor: SLATE,
+                            backgroundColor: 'rgba(100, 116, 139, 0.1)',
+                            fill: true,
+                            tension: 0.3
+                        },
+                        {
+                            label: 'Hinduism',
+                            data: [110, 150, 210, 230, 1200],
+                            borderColor: '#a0aec0',
+                            backgroundColor: 'rgba(160, 174, 192, 0.1)',
+                            fill: true,
+                            tension: 0.3
+                        },
+                        {
+                            label: 'Buddhism',
+                            data: [5, 120, 150, 140, 500],
+                            borderColor: SAND,
+                            backgroundColor: 'rgba(244, 233, 205, 0.1)',
+                            fill: true,
+                            tension: 0.3
+                        }
+                    ]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            title: { display: true, text: 'Adherents (in Millions)' },
+                            grid: { color: BORDER_COLOR },
+                            ticks: { color: SLATE }
+                        },
+                        x: {
+                            title: { display: true, text: 'Year' },
+                            grid: { display: false },
+                            ticks: { color: SLATE }
+                        }
+                    },
+                    plugins: {
+                        tooltip: { mode: 'index', intersect: false }
+                    }
+                }
+            });
+        }
+
+        // 3. Geographic Distribution Bar Chart
+        const geoDistCtx = document.getElementById('geographicDistributionChart');
+        if (geoDistCtx) {
+            new Chart(geoDistCtx, {
+                type: 'bar',
+                data: {
+                    labels: ['Christianity', 'Islam', 'Hinduism', 'Buddhism', 'Judaism'],
+                    datasets: [
+                        { label: 'Asia-Pacific', data: [14, 62, 99, 99, 1], backgroundColor: SAGE_GREEN },
+                        { label: 'Europe', data: [24, 6, 0, 0, 10], backgroundColor: SLATE },
+                        { label: 'N. America', data: [12, 1, 0, 0, 42], backgroundColor: '#a0aec0' },
+                        { label: 'Lat Am/Carib', data: [24, 0, 0, 0, 1], backgroundColor: '#cbd5e0' },
+                        { label: 'Mid East/N Africa', data: [1, 23, 0, 0, 47], backgroundColor: '#F4E9CD' },
+                        { label: 'Sub-Saharan Africa', data: [24, 8, 1, 1, 0], backgroundColor: '#E2E8F0' }
+                    ]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    scales: {
+                        x: {
+                            stacked: true,
+                            grid: { display: false },
+                            ticks: { color: SLATE }
+                        },
+                        y: {
+                            stacked: true,
+                            beginAtZero: true,
+                            title: { display: true, text: 'Percentage of Adherents by Region' },
+                            grid: { color: BORDER_COLOR },
+                            ticks: { color: SLATE }
+                        }
+                    },
+                    plugins: {
+                        legend: { position: 'bottom', labels: { font: FONT_DEFAULTS, color: CHARCOAL } }
+                    }
+                }
+            });
+        }
+
+        // 4. Fastest Growing Religions Bar Chart (Fixed)
+        const fastestGrowingCtx = document.getElementById('fastestGrowingChart');
+        if (fastestGrowingCtx) {
+            new Chart(fastestGrowingCtx, {
+                type: 'bar',
+                data: {
+                    labels: [
+                        'Islam', 'Christianity', 'Hinduism',
+                        'Judaism', 'Folk Religions', 'Buddhism'
+                    ],
+                    datasets: [{
+                        label: 'Projected Population Growth by 2050 (%)',
+                        data: [73, 35, 34, 16, 11, -0.3],
+                        backgroundColor: [
+                            SAGE_GREEN, SLATE, '#a0aec0', '#cbd5e0', SAND, '#E2E8F0'
+                        ],
+                        borderColor: '#FFFFFF',
+                        borderWidth: 2
+                    }]
+                },
+                options: {
+                    indexAxis: 'y',
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: { display: false },
+                        tooltip: {
+                            callbacks: {
+                                label: (context) =>
+                                    ' Projected Growth: ' + context.parsed.x + '%'
+                            }
+                        }
+                    },
+                    scales: {
+                        x: {
+                            title: {
+                                display: true,
+                                text: 'Projected Percent Growth by 2050'
+                            },
+                            grid: { color: BORDER_COLOR },
+                            ticks: {
+                                color: SLATE,
+                                callback: (value) => value + '%'
+                            }
+                        },
+                        y: {
+                            grid: { display: false },
+                            ticks: { color: CHARCOAL, font: FONT_DEFAULTS }
+                        }
+                    }
+                }
+            });
+        }
+            }); // end of DOMContentLoaded
+</script>
+
+
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+    AOS.init({
+        duration: 800, // animation duration
+        once: true,    // whether animation should happen only once
+    });
+</script>
+
+</body>
+</html>

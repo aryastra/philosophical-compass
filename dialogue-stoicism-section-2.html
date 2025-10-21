@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Section 2: Anxiety, Therapy, and the Inner Captain | The Philosophical Compass</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        // Zen Garden Palette
+                        'stone': '#F1F5F9',        
+                        'white': '#FFFFFF',
+                        'charcoal': '#1E293B',     
+                        'slate': '#64748B',        
+                        'sage-green': '#65816D',  
+                        'sand': '#F4E9CD',          
+                        'border-color': '#E2E8F0',  
+                    },
+                    fontFamily: {
+                        'sans': ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        html { scroll-behavior: smooth; }
+        ::selection { background-color: #65816D; color: #ffffff; }
+        strong { font-weight: 700; color: #1E293B; }
+        em { font-style: italic; color: #65816D; }
+    </style>
+</head>
+
+<body class="font-sans bg-stone text-charcoal antialiased">
+    <div class="min-h-screen">
+
+        <header class="sticky top-0 z-50 bg-stone/80 backdrop-blur-md border-b border-border-color">
+            <nav class="container mx-auto px-6 py-4">
+                <div class="flex justify-between items-center">
+                    <a href="index.html" class="font-extrabold text-2xl tracking-tight text-charcoal">
+                        The Philosophical <span class="text-sage-green">Compass</span>
+                    </a>
+                    <ul class="hidden md:flex items-center space-x-8 text-sm font-semibold">
+                        <li><a href="dialogues.html" class="text-sage-green">Dialogues</a></li>
+                        <li><a href="themes.html" class="text-slate hover:text-sage-green transition-colors duration-300">Themes</a></li>
+                        <li><a href="about.html" class="text-slate hover:text-sage-green transition-colors duration-300">About</a></li>
+                        <li><a href="subscribe.html" class="text-slate hover:text-sage-green transition-colors duration-300">Subscribe</a></li>
+                    </ul>
+                    <div class="md:hidden">
+                        <button id="menu-btn" class="text-charcoal hover:text-sage-green focus:outline-none">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                        </button>
+                    </div>
+                </div>
+                <div id="mobile-menu" class="hidden md:hidden mt-4">
+                    <ul class="flex flex-col space-y-4">
+                        <li><a href="dialogues.html" class="block py-2 text-sage-green font-bold">Dialogues</a></li>
+                        <li><a href="themes.html" class="block py-2 text-slate font-bold hover:text-sage-green">Themes</a></li>
+                        <li><a href="about.html" class="block py-2 text-slate font-bold hover:text-sage-green">About</a></li>
+                        <li><a href="subscribe.html" class="block py-2 text-slate font-bold hover:text-sage-green">Subscribe</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+
+        <main class="container mx-auto px-6 py-16 md:py-24">
+            <div class="max-w-4xl mx-auto">
+                <section class="bg-white rounded-lg shadow-sm border border-border-color">
+                    <div class="p-8 md:p-12">
+                        <h1 class="font-bold text-4xl border-b border-border-color pb-4 mb-8 text-charcoal">Section 2: Anxiety, Therapy, and the Inner Captain</h1>
+                        <div class="space-y-8 text-base leading-relaxed text-slate">
+                            
+                            <div class="space-y-4">
+                                <p><strong>Seeker:</strong> That sounds simple in theory, but my anxiety isn't just a 'view' or a 'judgment.' It’s a physical feeling—a racing heart, shortness of breath. It feels like a fire inside me. And I can’t just decide to not be concerned with my career; my ability to pay rent and live depends on it. My boss’s expectations are external, yes, but they have very real power over my life.</p>
+                            </div>
+
+                            <blockquote class="border-l-4 border-sage-green/30 bg-stone/50 p-6 rounded-r-lg space-y-4">
+                                <p><strong>Stoic:</strong> You misunderstand. The goal is not to ignore these things, but to engage with them correctly. You do not control the final outcome of your work—whether it brings praise or blame—but you have absolute control over the effort and integrity you put into it. Marcus Aurelius reminds us to concentrate on the task at hand, “working with precise and genuine seriousness, tenderly, willingly, with justice.” Do your work with excellence because that is the right way to act, not because you are terrified of the consequences. The anxiety you feel comes from chaining your well-being to an outcome you cannot command. The freedom comes from anchoring it to what you *can* command: your own character and your own actions.</p>
+                            </blockquote>
+
+                            <div class="space-y-4">
+                                <p><strong>Seeker:</strong> But what if the anxiety itself is the problem? My doctor says I have an anxiety disorder. There’s therapy, there’s medication… Are you suggesting I should just try to ‘think’ my way out of what might be a chemical imbalance in my brain? It feels dismissive of modern medicine and psychology.</p>
+                            </div>
+                            
+                            <blockquote class="border-l-4 border-sage-green/30 bg-stone/50 p-6 rounded-r-lg space-y-4">
+                                <p><strong>Stoic:</strong> Not at all. The state of your body, like the state of your wealth or your reputation, is an external. If your leg is broken, you see a physician to set the bone. If your mind is afflicted by an ailment of the body, you should likewise seek the physician’s aid. A Stoic uses all the tools at their disposal to live a reasonable life. Think of it this way: the medicine can help calm the physical storm in your body, but the philosophy is what trains the captain of the ship—your ruling reason—on how to navigate that storm. The two are not enemies; they are allies. One heals the vessel, the other guides its course.</p>
+                            </blockquote>
+
+                        </div>
+                    </div>
+
+                    <div class="border-t border-border-color mt-8 flex justify-between items-center p-6">
+                        <a href="dialogue-stoicism-section-1.html" class="flex items-center space-x-2 font-semibold text-slate hover:text-sage-green transition-colors duration-300">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z" clip-rule="evenodd" /></svg>
+                            <span>Previous Section</span>
+                        </a>
+                        <a href="dialogue-stoicism-section-3.html" class="flex items-center space-x-2 font-semibold text-slate hover:text-sage-green transition-colors duration-300">
+                            <span>Next Section</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" /></svg>
+                        </a>
+                    </div>
+                </section>
+            </div>
+        </main>
+
+        <footer class="mt-16 border-t border-border-color bg-white">
+            <div class="container mx-auto px-6 py-8 text-center text-slate text-sm">
+                <p>&copy; 2025 The Philosophical Compass. All Rights Reserved.</p>
+            </div>
+        </footer>
+    </div>
+    
+    <script>
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>

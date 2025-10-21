@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>East vs. West: A World of Ideas | The Philosophical Compass</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        // Zen Garden Palette
+                        'stone': '#F1F5F9',        
+                        'white': '#FFFFFF',
+                        'charcoal': '#1E293B',     
+                        'slate': '#64748B',        
+                        'sage-green': '#65816D',  
+                        'sand': '#F4E9CD',          
+                        'border-color': '#E2E8F0',  
+                    },
+                    fontFamily: {
+                        'sans': ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        html { scroll-behavior: smooth; }
+        ::selection { background-color: #65816D; color: #ffffff; }
+        strong { font-weight: 700; color: #1E293B; }
+        em { font-style: italic; color: #65816D; }
+
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 300px;
+        }
+        @media (min-width: 640px) { .chart-container { height: 400px; } }
+        
+        .list-circle li {
+            position: relative;
+            padding-left: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+        .list-circle li::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0.7em;
+            width: 0.5rem;
+            height: 0.5rem;
+            background-color: #65816D;
+            border-radius: 50%;
+            transform: translateY(-50%);
+        }
+    </style>
+</head>
+
+<body class="font-sans bg-stone text-charcoal antialiased">
+
+    <header class="sticky top-0 z-50 bg-stone/80 backdrop-blur-md border-b border-border-color">
+        <nav class="container mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <a href="index.html" class="font-extrabold text-2xl tracking-tight text-charcoal">
+                    The Philosophical <span class="text-sage-green">Compass</span>
+                </a>
+                <ul class="hidden md:flex items-center space-x-8 text-sm font-semibold">
+                    <li><a href="dialogues.html" class="text-slate hover:text-sage-green transition-colors duration-300">Dialogues</a></li>
+                    <li><a href="themes.html" class="text-sage-green">Themes</a></li>
+                    <li><a href="about.html" class="text-slate hover:text-sage-green transition-colors duration-300">About</a></li>
+                    <li><a href="subscribe.html" class="text-slate hover:text-sage-green transition-colors duration-300">Subscribe</a></li>
+                </ul>
+                <div class="md:hidden">
+                    <button id="menu-btn" class="text-charcoal hover:text-sage-green focus:outline-none">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                    </button>
+                </div>
+            </div>
+            <div id="mobile-menu" class="hidden md:hidden mt-4">
+                <ul class="flex flex-col space-y-4">
+                    <li><a href="dialogues.html" class="block py-2 text-slate font-bold hover:text-sage-green">Dialogues</a></li>
+                    <li><a href="themes.html" class="block py-2 text-sage-green font-bold">Themes</a></li>
+                    <li><a href="about.html" class="block py-2 text-slate font-bold hover:text-sage-green">About</a></li>
+                    <li><a href="subscribe.html" class="block py-2 text-slate font-bold hover:text-sage-green">Subscribe</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container mx-auto p-4 sm:p-6 lg:p-8 py-16">
+
+    <header class="text-center mb-12">
+        <h1 class="text-4xl md:text-6xl font-extrabold text-charcoal leading-tight tracking-tighter">East vs. West</h1>
+        <p class="text-2xl md:text-3xl font-bold text-sage-green">A World of Ideas</p>
+        <p class="max-w-3xl mx-auto mt-4 text-slate leading-relaxed">
+            Cultural frameworks shape our societies, values, and even our sense of self. This infographic explores two of the most fundamental concepts: the "I" of Individualism and the "We" of Collectivism.
+        </p>
+    </header>
+
+    <section class="mb-12 bg-white rounded-lg shadow-sm border border-border-color p-8">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div class="text-center">
+            <h2 class="text-3xl font-bold text-charcoal mb-2">Individualism</h2>
+            <p class="text-slate">A social theory favoring freedom of action for individuals over collective control. The focus is on personal achievement and uniqueness.</p>
+            <ul class="text-left mt-4 space-y-2 list-circle text-slate">
+                <li>Emphasis on "I", personal identity.</li>
+                <li>Individual rights and freedoms are paramount.</li>
+                <li>Independence and self-reliance are highly valued.</li>
+                <li>Success is measured by personal accomplishment.</li>
+            </ul>
+        </div>
+        <div class="text-center md:border-l border-border-color md:pl-8">
+            <h2 class="text-3xl font-bold text-charcoal mb-2">Collectivism</h2>
+            <p class="text-slate">A social theory that gives priority to the group over the individual. The focus is on interdependence, harmony, and group success.</p>
+            <ul class="text-left mt-4 space-y-2 list-circle text-slate">
+                <li>Emphasis on "We", group identity.</li>
+                <li>Group goals and solidarity are paramount.</li>
+                <li>Interdependence and cooperation are highly valued.</li>
+                <li>Success is measured by contributions to the group.</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<section class="mb-12 bg-white rounded-lg shadow-sm border border-border-color p-8">
+    <h2 class="text-3xl font-bold text-center text-charcoal mb-8">Philosophical Roots</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div>
+            <h3 class="text-2xl font-bold text-charcoal mb-4 border-b border-border-color pb-2">The Enlightenment & The Individual</h3>
+            <p class="text-slate text-sm mb-4">Western individualism has deep roots in Enlightenment thought, which championed reason and individual autonomy.</p>
+            <ul class="space-y-3 text-sm list-circle text-slate">
+                <li><strong>John Locke:</strong> Argued for natural rights—life, liberty, and property—inherent to the individual, not granted by a monarch or state.</li>
+                <li><strong>Adam Smith:</strong> Proposed that individuals pursuing their own self-interest in a free market could lead to collective prosperity (the "invisible hand").</li>
+            </ul>
+        </div>
+        <div>
+            <h3 class="text-2xl font-bold text-charcoal mb-4 border-b border-border-color pb-2">Confucianism & The Collective</h3>
+            <p class="text-slate text-sm mb-4">Eastern collectivism is heavily influenced by Confucianism, which prioritizes social harmony and ethical roles.</p>
+            <ul class="space-y-3 text-sm list-circle text-slate">
+                <li><strong>The Five Relationships:</strong> Defined society through hierarchical relationships (ruler-subject, father-son, etc.), where each person has a clear duty.</li>
+                <li><strong>Social Harmony:</strong> The ultimate good is not individual freedom but a well-ordered, harmonious society where everyone fulfills their role.</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<section class="mb-12 bg-white rounded-lg shadow-sm border border-border-color p-8">
+    <h2 class="text-3xl font-bold text-center text-charcoal mb-8">Strengths & Weaknesses</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div class="bg-stone p-6 rounded-lg border border-border-color">
+            <h3 class="text-2xl font-bold text-charcoal mb-4">Individualism</h3>
+            <p class="font-semibold text-sage-green mb-2">Strengths:</p>
+            <ul class="text-sm list-circle text-slate mb-4">
+                <li>Fosters innovation and creativity.</li>
+                <li>Protects individual freedoms and rights.</li>
+                <li>Encourages self-reliance and personal accountability.</li>
+            </ul>
+            <p class="font-semibold text-terracotta mb-2">Weaknesses:</p>
+            <ul class="text-sm list-circle text-slate">
+                <li>Can lead to social isolation and loneliness.</li>
+                <li>May result in higher economic inequality.</li>
+                <li>Can weaken community support systems.</li>
+            </ul>
+        </div>
+         <div class="bg-stone p-6 rounded-lg border border-border-color">
+            <h3 class="text-2xl font-bold text-charcoal mb-4">Collectivism</h3>
+            <p class="font-semibold text-sage-green mb-2">Strengths:</p>
+            <ul class="text-sm list-circle text-slate mb-4">
+                <li>Provides strong social safety nets and family support.</li>
+                <li>Promotes social harmony and stability.</li>
+                <li>Encourages cooperation and shared goals.</li>
+            </ul>
+            <p class="font-semibold text-terracotta mb-2">Weaknesses:</p>
+            <ul class="text-sm list-circle text-slate">
+                <li>Can suppress individual dissent and creativity.</li>
+                <li>May lead to groupthink and pressure to conform.</li>
+                <li>Can foster nepotism and in-group favoritism.</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<section class="mb-12 bg-white rounded-lg shadow-sm border border-border-color p-8">
+    <h2 class="text-3xl font-bold text-center text-charcoal mb-8">Cultural Fingerprints: Proverbs</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+        <div class="text-center p-4">
+            <p class="text-lg italic text-slate">"The squeaky wheel gets the grease."</p>
+            <p class="text-sm text-charcoal font-semibold mt-2">(Individualistic: Speaking up gets you what you need.)</p>
+        </div>
+        <div class="text-center p-4 border-t md:border-t-0 md:border-l border-border-color">
+            <p class="text-lg italic text-slate">"The nail that sticks out gets hammered down."</p>
+            <p class="text-sm text-charcoal font-semibold mt-2">(Collectivistic: Conforming is safer than standing out.)</p>
+        </div>
+    </div>
+</section>
+
+<section class="mb-12 bg-white rounded-lg shadow-sm border border-border-color p-8">
+    <h2 class="text-3xl font-bold text-center text-charcoal mb-8">Philosophical Roots</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div>
+            <h3 class="text-2xl font-bold text-charcoal mb-4 border-b border-border-color pb-2">The Enlightenment & The Individual</h3>
+            <p class="text-slate text-sm mb-4">Western individualism has deep roots in Enlightenment thought, which championed reason and individual autonomy.</p>
+            <ul class="space-y-3 text-sm list-circle text-slate">
+                <li><strong>John Locke:</strong> Argued for natural rights—life, liberty, and property—inherent to the individual, not granted by a monarch or state.</li>
+                <li><strong>Adam Smith:</strong> Proposed that individuals pursuing their own self-interest in a free market could lead to collective prosperity (the "invisible hand").</li>
+            </ul>
+        </div>
+        <div>
+            <h3 class="text-2xl font-bold text-charcoal mb-4 border-b border-border-color pb-2">Confucianism & The Collective</h3>
+            <p class="text-slate text-sm mb-4">Eastern collectivism is heavily influenced by Confucianism, which prioritizes social harmony and ethical roles.</p>
+            <ul class="space-y-3 text-sm list-circle text-slate">
+                <li><strong>The Five Relationships:</strong> Defined society through hierarchical relationships (ruler-subject, father-son, etc.), where each person has a clear duty.</li>
+                <li><strong>Social Harmony:</strong> The ultimate good is not individual freedom but a well-ordered, harmonious society where everyone fulfills their role.</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<section class="bg-white rounded-lg shadow-sm border border-border-color p-8 mb-12">
+    <h2 class="text-3xl font-bold text-center text-charcoal mb-2">Global Snapshot: Individualism Scores</h2>
+    <p class="text-center text-slate max-w-3xl mx-auto mb-6">Based on Hofstede's cultural dimensions theory, countries can be scored on their degree of individualism. A higher score indicates a more individualistic culture. This chart compares several nations, showing a clear pattern, though exceptions always exist.</p>
+    <div class="chart-container" style="height: 450px;">
+        <canvas id="individualismScoresChart"></canvas>
+    </div>
+</section>
+
+<section class="bg-white rounded-lg shadow-sm border border-border-color p-8 mb-12">
+    <h2 class="text-3xl font-bold text-center text-charcoal mb-2">Core Value Comparison</h2>
+    <p class="text-center text-slate max-w-3xl mx-auto mb-6">This radar chart visualizes the contrasting priorities between the two frameworks across key societal values. The shape of each ideology highlights its fundamental focus.</p>
+    <div class="chart-container">
+        <canvas id="coreValuesChart"></canvas>
+    </div>
+</section>
+
+<section id="in-practice" class="my-12">
+    <h2 class="text-3xl font-bold text-center text-charcoal mb-2">In Practice: Daily Life & Work</h2>
+    <p class="text-center text-slate max-w-3xl mx-auto mb-8">These cultural ideas are not just abstract; they shape concrete behaviors and expectations in our families, workplaces, and social interactions.</p>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div class="bg-white rounded-lg shadow-sm border border-border-color p-8">
+            <h3 class="text-2xl font-bold text-charcoal mb-4">The Workplace</h3>
+            <div class="space-y-4">
+                <div>
+                    <p class="font-semibold text-sage-green">Individualistic:</p>
+                    <p class="text-slate text-sm">Hiring and promotion are based on individual merit and achievement. Employees are expected to be self-starters and take personal initiative. Task completion often takes precedence over relationships.</p>
+                </div>
+                <div>
+                    <p class="font-semibold text-sage-green">Collectivistic:</p>
+                    <p class="text-slate text-sm">Hiring may favor in-group members to ensure loyalty and harmony. Decisions are often made by consensus. Maintaining good working relationships is crucial for productivity.</p>
+                </div>
+            </div>
+        </div>
+        <div class="bg-white rounded-lg shadow-sm border border-border-color p-8">
+             <h3 class="text-2xl font-bold text-charcoal mb-4">Family & Social Life</h3>
+            <div class="space-y-4">
+                <div>
+                    <p class="font-semibold text-sage-green">Individualistic:</p>
+                    <p class="text-slate text-sm">The nuclear family (parents and children) is the core unit. Children are raised to be independent. Privacy is highly valued, and individual choices are respected.</p>
+                </div>
+                <div>
+                    <p class="font-semibold text-sage-green">Collectivistic:</p>
+                    <p class="text-slate text-sm">The extended family (grandparents, aunts, uncles) is the core unit. Children are raised to be interdependent. Resources are often shared, and family loyalty is a primary duty.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="mt-12 bg-white rounded-lg shadow-sm border border-border-color p-8">
+    <h2 class="text-3xl font-bold text-center text-charcoal mb-2">Communication Styles</h2>
+    <p class="text-center text-slate max-w-3xl mx-auto mb-8">How we speak is deeply influenced by our cultural background. Individualistic cultures tend to be direct, while collectivistic cultures often rely on indirect communication to maintain harmony.</p>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-center">
+        <div>
+            <h3 class="text-2xl font-bold text-charcoal mb-4">Direct Communication</h3>
+            <div class="flex items-center justify-center p-4 bg-stone rounded-lg border border-border-color">
+                <div class="font-semibold p-3 bg-sage-green text-white rounded-md shadow-sm">SAY</div>
+                <div class="mx-2 text-slate text-2xl">→</div>
+                <div class="font-semibold p-3 bg-sage-green text-white rounded-md shadow-sm">WHAT</div>
+                <div class="mx-2 text-slate text-2xl">→</div>
+                <div class="font-semibold p-3 bg-sage-green text-white rounded-md shadow-sm">YOU MEAN</div>
+            </div>
+            <p class="mt-3 text-slate text-sm">Clarity and honesty are prized. "Yes" means yes. Conflict is addressed head-on.</p>
+        </div>
+        <div class="md:border-l border-border-color md:pl-8">
+            <h3 class="text-2xl font-bold text-charcoal mb-4">Indirect Communication</h3>
+            <div class="flex items-center justify-center p-4 bg-stone rounded-lg border border-border-color min-h-[92px]">
+                <div class="grid grid-cols-2 gap-2">
+                    <div class="font-semibold p-2 bg-slate text-white rounded-md shadow-sm">Hint</div>
+                    <div class="font-semibold p-2 bg-slate text-white rounded-md shadow-sm">Context</div>
+                    <div class="font-semibold p-2 bg-slate text-white rounded-md shadow-sm">Imply</div>
+                    <div class="font-semibold p-2 bg-slate text-white rounded-md shadow-sm">Suggest</div>
+                </div>
+            </div>
+            <p class="mt-3 text-slate text-sm">Maintaining group harmony is prized. "Yes" may mean "I hear you." Conflict is avoided.</p>
+        </div>
+    </div>
+</section>
+
+<section class="text-center mt-16 py-6 border-t border-border-color">
+    <h2 class="text-3xl font-bold text-charcoal">The Converging World</h2>
+    <p class="text-slate max-w-3xl mx-auto mt-4 leading-relaxed">
+        No culture is a monolith. As the world becomes more interconnected through globalization and economic development, we see a fascinating trend: many collectivistic societies are adopting more individualistic traits, while many in individualistic cultures are seeking a greater sense of community. Understanding both frameworks is no longer just an academic exercise—it's essential for navigating our shared global future.
+    </p>
+</section>
+
+<section class="mt-12 text-center">
+    <a href="index.html#infographics" class="inline-block font-bold text-white bg-sage-green rounded-md py-3 px-8 transition-all duration-300 hover:bg-charcoal hover:shadow-lg hover:-translate-y-1">
+        Back to All Infographics
+    </a>
+</section>
+
+</main>
+
+    <footer class="mt-16 border-t border-border-color bg-white">
+        <div class="container mx-auto px-6 py-8 text-center text-slate text-sm">
+            <p>&copy; 2025 The Philosophical Compass. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        if (menuBtn) {
+            menuBtn.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+        }
+
+        // Chart.js configurations
+        document.addEventListener('DOMContentLoaded', function () {
+            
+            const individualismScoresCtx = document.getElementById('individualismScoresChart').getContext('2d');
+            new Chart(individualismScoresCtx, {
+                type: 'bar',
+                data: {
+                    labels: ['United States', 'Australia', 'U.K.', 'Netherlands', 'China', 'South Korea', 'Panama', 'Ecuador', 'Guatemala'],
+                    datasets: [{
+                        label: 'Individualism Score',
+                        data: [91, 90, 89, 80, 20, 18, 11, 8, 6],
+                        backgroundColor: (context) => {
+                            const value = context.dataset.data[context.dataIndex];
+                            return value > 50 ? '#65816D' : '#64748B'; // Sage Green for Individualistic, Slate for Collectivistic
+                        },
+                        borderRadius: 4,
+                    }]
+                },
+                options: {
+                    indexAxis: 'y',
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    scales: {
+                        x: { 
+                            beginAtZero: true, 
+                            grid: { display: false }, 
+                            ticks: { color: '#64748B', font: { family: 'Inter' } } 
+                        },
+                        y: { 
+                            grid: { color: '#E2E8F0' }, 
+                            ticks: { color: '#1E293B', font: { weight: '600', family: 'Inter' } } 
+                        }
+                    },
+                    plugins: { 
+                        legend: { display: false } 
+                    }
+                }
+            });
+
+            const coreValuesCtx = document.getElementById('coreValuesChart').getContext('2d');
+            const wrapLabels = (label, maxWidth) => {
+                const words = label.split(' ');
+                let lines = [''];
+                let currentLine = 0;
+                for (let i = 0; i < words.length; i++) {
+                    if (lines[currentLine].length + words[i].length < maxWidth) {
+                        lines[currentLine] += ' ' + words[i];
+                    } else {
+                        lines.push(words[i]);
+                        currentLine++;
+                    }
+                }
+                return lines.map(l => l.trim());
+            }
+
+            const rawLabels = ['Personal Freedom', 'Group Harmony', 'Self-Reliance', 'Interdependence', 'Direct Communication', 'Maintaining Face'];
+            const processedLabels = rawLabels.map(label => wrapLabels(label, 15));
+
+            new Chart(coreValuesCtx, {
+                type: 'radar',
+                data: {
+                    labels: processedLabels,
+                    datasets: [{
+                        label: 'Individualism',
+                        data: [9, 3, 9, 2, 8, 2],
+                        backgroundColor: 'rgba(101, 129, 109, 0.2)',
+                        borderColor: '#65816D',
+                        pointBackgroundColor: '#65816D',
+                        borderWidth: 2
+                    }, {
+                        label: 'Collectivism',
+                        data: [3, 9, 2, 9, 3, 9],
+                        backgroundColor: 'rgba(100, 116, 139, 0.2)',
+                        borderColor: '#64748B',
+                        pointBackgroundColor: '#64748B',
+                        borderWidth: 2
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    scales: {
+                        r: {
+                            angleLines: { color: '#E2E8F0' },
+                            grid: { color: '#E2E8F0' },
+                            pointLabels: { font: { size: 12, family: 'Inter' }, color: '#1E293B' },
+                            suggestedMin: 0,
+                            suggestedMax: 10,
+                            ticks: { display: false }
+                        }
+                    },
+                    plugins: {
+                        legend: { 
+                            position: 'bottom', 
+                            labels: { 
+                                font: { size: 14, family: 'Inter' }, 
+                                color: '#1E293B', 
+                                padding: 20 
+                            } 
+                        }
+                    }
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>
